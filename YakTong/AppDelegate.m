@@ -1,11 +1,6 @@
-//
-//  AppDelegate.m
-//  YakTong
-//
-//  Created by 정근호 on 3/25/24.
-//
-
 #import "AppDelegate.h"
+
+@import FirebaseCore;
 
 @interface AppDelegate ()
 
@@ -15,7 +10,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    NSLog(@"%s, line: %d, %@",__func__, __LINE__, @"");
+    
+    [FIRApp configure];
     return YES;
 }
 
