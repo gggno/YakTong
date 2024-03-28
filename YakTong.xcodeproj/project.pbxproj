@@ -7,32 +7,50 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		662FD59B2BB45BC7008EF823 /* MedicationResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 662FD59A2BB45BC7008EF823 /* MedicationResponse.m */; };
+		662FD5A02BB55570008EF823 /* MediItems.m in Sources */ = {isa = PBXBuildFile; fileRef = 662FD59F2BB55570008EF823 /* MediItems.m */; };
 		66C7F9A92BB2F36A00C51C31 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 66C7F9A82BB2F36A00C51C31 /* GoogleService-Info.plist */; };
 		66C7F9AC2BB2F3DE00C51C31 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 66C7F9AB2BB2F3DE00C51C31 /* FirebaseDatabase */; };
 		66C7F9AE2BB2F3DE00C51C31 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 66C7F9AD2BB2F3DE00C51C31 /* FirebaseFirestore */; };
 		66D860E22BB1B14400C70006 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D860E12BB1B14400C70006 /* AppDelegate.m */; };
 		66D860E52BB1B14400C70006 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D860E42BB1B14400C70006 /* SceneDelegate.m */; };
-		66D860E82BB1B14400C70006 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D860E72BB1B14400C70006 /* ViewController.m */; };
 		66D860EB2BB1B14400C70006 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 66D860EA2BB1B14400C70006 /* Base */; };
 		66D860ED2BB1B14600C70006 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66D860EC2BB1B14600C70006 /* Assets.xcassets */; };
 		66D860F02BB1B14600C70006 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 66D860EF2BB1B14600C70006 /* Base */; };
 		66D860F32BB1B14600C70006 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D860F22BB1B14600C70006 /* main.m */; };
+		66ED7AAD2BB3F1AC0086CE20 /* MedicationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66ED7AAB2BB3F1AC0086CE20 /* MedicationTableViewController.m */; };
+		66ED7AB02BB3F1EA0086CE20 /* MedicationTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66ED7AAF2BB3F1EA0086CE20 /* MedicationTableViewController.storyboard */; };
+		66ED7AB32BB3F75C0086CE20 /* AddMedicationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66ED7AB22BB3F75C0086CE20 /* AddMedicationTableViewController.m */; };
+		66ED7AB62BB3F7860086CE20 /* AddMedicationTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66ED7AB52BB3F7860086CE20 /* AddMedicationTableViewController.storyboard */; };
+		66ED7ABA2BB3F90A0086CE20 /* YakTongTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66ED7AB92BB3F90A0086CE20 /* YakTongTableViewController.m */; };
+		66ED7ABC2BB3F9150086CE20 /* YakTongTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66ED7ABB2BB3F9150086CE20 /* YakTongTableViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		662FD5992BB45BC7008EF823 /* MedicationResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MedicationResponse.h; sourceTree = "<group>"; };
+		662FD59A2BB45BC7008EF823 /* MedicationResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MedicationResponse.m; sourceTree = "<group>"; };
+		662FD59E2BB55570008EF823 /* MediItems.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MediItems.h; sourceTree = "<group>"; };
+		662FD59F2BB55570008EF823 /* MediItems.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MediItems.m; sourceTree = "<group>"; };
 		66C7F9A82BB2F36A00C51C31 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		66D860DD2BB1B14400C70006 /* YakTong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YakTong.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66D860E02BB1B14400C70006 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		66D860E12BB1B14400C70006 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		66D860E32BB1B14400C70006 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		66D860E42BB1B14400C70006 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		66D860E62BB1B14400C70006 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		66D860E72BB1B14400C70006 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		66D860EA2BB1B14400C70006 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		66D860EC2BB1B14600C70006 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		66D860EF2BB1B14600C70006 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		66D860F12BB1B14600C70006 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66D860F22BB1B14600C70006 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		66ED7AAA2BB3F1AC0086CE20 /* MedicationTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MedicationTableViewController.h; sourceTree = "<group>"; };
+		66ED7AAB2BB3F1AC0086CE20 /* MedicationTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MedicationTableViewController.m; sourceTree = "<group>"; };
+		66ED7AAF2BB3F1EA0086CE20 /* MedicationTableViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MedicationTableViewController.storyboard; sourceTree = "<group>"; };
+		66ED7AB12BB3F75C0086CE20 /* AddMedicationTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddMedicationTableViewController.h; sourceTree = "<group>"; };
+		66ED7AB22BB3F75C0086CE20 /* AddMedicationTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddMedicationTableViewController.m; sourceTree = "<group>"; };
+		66ED7AB52BB3F7860086CE20 /* AddMedicationTableViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddMedicationTableViewController.storyboard; sourceTree = "<group>"; };
+		66ED7AB82BB3F90A0086CE20 /* YakTongTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YakTongTableViewController.h; sourceTree = "<group>"; };
+		66ED7AB92BB3F90A0086CE20 /* YakTongTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YakTongTableViewController.m; sourceTree = "<group>"; };
+		66ED7ABB2BB3F9150086CE20 /* YakTongTableViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = YakTongTableViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +66,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		662FD5972BB45B7B008EF823 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				662FD5982BB45B86008EF823 /* MedicationResponse */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		662FD5982BB45B86008EF823 /* MedicationResponse */ = {
+			isa = PBXGroup;
+			children = (
+				662FD5992BB45BC7008EF823 /* MedicationResponse.h */,
+				662FD59A2BB45BC7008EF823 /* MedicationResponse.m */,
+				662FD59E2BB55570008EF823 /* MediItems.h */,
+				662FD59F2BB55570008EF823 /* MediItems.m */,
+			);
+			path = MedicationResponse;
+			sourceTree = "<group>";
+		};
 		66D860D42BB1B14400C70006 = {
 			isa = PBXGroup;
 			children = (
@@ -67,18 +104,58 @@
 		66D860DF2BB1B14400C70006 /* YakTong */ = {
 			isa = PBXGroup;
 			children = (
+				662FD5972BB45B7B008EF823 /* Models */,
+				66ED7AA82BB3F0890086CE20 /* Controllers */,
 				66D860E02BB1B14400C70006 /* AppDelegate.h */,
 				66D860E12BB1B14400C70006 /* AppDelegate.m */,
 				66D860E32BB1B14400C70006 /* SceneDelegate.h */,
 				66D860E42BB1B14400C70006 /* SceneDelegate.m */,
-				66D860E62BB1B14400C70006 /* ViewController.h */,
-				66D860E72BB1B14400C70006 /* ViewController.m */,
 				66D860E92BB1B14400C70006 /* Main.storyboard */,
 				66D860EC2BB1B14600C70006 /* Assets.xcassets */,
 				66D860EE2BB1B14600C70006 /* LaunchScreen.storyboard */,
 				66D860F12BB1B14600C70006 /* Info.plist */,
 				66C7F9A82BB2F36A00C51C31 /* GoogleService-Info.plist */,
 				66D860F22BB1B14600C70006 /* main.m */,
+			);
+			path = YakTong;
+			sourceTree = "<group>";
+		};
+		66ED7AA82BB3F0890086CE20 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				66ED7AA92BB3F1010086CE20 /* Medication */,
+				66ED7AB42BB3F7620086CE20 /* AddMedication */,
+				66ED7AB72BB3F8890086CE20 /* YakTong */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		66ED7AA92BB3F1010086CE20 /* Medication */ = {
+			isa = PBXGroup;
+			children = (
+				66ED7AAA2BB3F1AC0086CE20 /* MedicationTableViewController.h */,
+				66ED7AAB2BB3F1AC0086CE20 /* MedicationTableViewController.m */,
+				66ED7AAF2BB3F1EA0086CE20 /* MedicationTableViewController.storyboard */,
+			);
+			path = Medication;
+			sourceTree = "<group>";
+		};
+		66ED7AB42BB3F7620086CE20 /* AddMedication */ = {
+			isa = PBXGroup;
+			children = (
+				66ED7AB12BB3F75C0086CE20 /* AddMedicationTableViewController.h */,
+				66ED7AB22BB3F75C0086CE20 /* AddMedicationTableViewController.m */,
+				66ED7AB52BB3F7860086CE20 /* AddMedicationTableViewController.storyboard */,
+			);
+			path = AddMedication;
+			sourceTree = "<group>";
+		};
+		66ED7AB72BB3F8890086CE20 /* YakTong */ = {
+			isa = PBXGroup;
+			children = (
+				66ED7AB82BB3F90A0086CE20 /* YakTongTableViewController.h */,
+				66ED7AB92BB3F90A0086CE20 /* YakTongTableViewController.m */,
+				66ED7ABB2BB3F9150086CE20 /* YakTongTableViewController.storyboard */,
 			);
 			path = YakTong;
 			sourceTree = "<group>";
@@ -147,10 +224,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66ED7ABC2BB3F9150086CE20 /* YakTongTableViewController.storyboard in Resources */,
 				66D860ED2BB1B14600C70006 /* Assets.xcassets in Resources */,
 				66D860F02BB1B14600C70006 /* Base in Resources */,
 				66C7F9A92BB2F36A00C51C31 /* GoogleService-Info.plist in Resources */,
 				66D860EB2BB1B14400C70006 /* Base in Resources */,
+				66ED7AB02BB3F1EA0086CE20 /* MedicationTableViewController.storyboard in Resources */,
+				66ED7AB62BB3F7860086CE20 /* AddMedicationTableViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,10 +241,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66D860E82BB1B14400C70006 /* ViewController.m in Sources */,
 				66D860E22BB1B14400C70006 /* AppDelegate.m in Sources */,
+				66ED7ABA2BB3F90A0086CE20 /* YakTongTableViewController.m in Sources */,
+				66ED7AAD2BB3F1AC0086CE20 /* MedicationTableViewController.m in Sources */,
+				662FD5A02BB55570008EF823 /* MediItems.m in Sources */,
 				66D860F32BB1B14600C70006 /* main.m in Sources */,
+				66ED7AB32BB3F75C0086CE20 /* AddMedicationTableViewController.m in Sources */,
 				66D860E52BB1B14400C70006 /* SceneDelegate.m in Sources */,
+				662FD59B2BB45BC7008EF823 /* MedicationResponse.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
