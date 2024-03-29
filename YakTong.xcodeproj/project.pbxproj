@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		662FD59B2BB45BC7008EF823 /* MedicationResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 662FD59A2BB45BC7008EF823 /* MedicationResponse.m */; };
 		662FD5A02BB55570008EF823 /* MediItems.m in Sources */ = {isa = PBXBuildFile; fileRef = 662FD59F2BB55570008EF823 /* MediItems.m */; };
+		662FD5A82BB69583008EF823 /* AddMediTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 662FD5A62BB69582008EF823 /* AddMediTableViewCell.m */; };
+		662FD5A92BB69583008EF823 /* AddMediTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 662FD5A72BB69582008EF823 /* AddMediTableViewCell.xib */; };
+		662FD5AC2BB6B1ED008EF823 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 662FD5AB2BB6B1ED008EF823 /* SDWebImage */; };
+		662FD5B02BB71D91008EF823 /* UIScrollView+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 662FD5AF2BB71D91008EF823 /* UIScrollView+Helpers.m */; };
 		66C7F9A92BB2F36A00C51C31 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 66C7F9A82BB2F36A00C51C31 /* GoogleService-Info.plist */; };
 		66C7F9AC2BB2F3DE00C51C31 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 66C7F9AB2BB2F3DE00C51C31 /* FirebaseDatabase */; };
 		66C7F9AE2BB2F3DE00C51C31 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 66C7F9AD2BB2F3DE00C51C31 /* FirebaseFirestore */; };
@@ -31,6 +35,11 @@
 		662FD59A2BB45BC7008EF823 /* MedicationResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MedicationResponse.m; sourceTree = "<group>"; };
 		662FD59E2BB55570008EF823 /* MediItems.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MediItems.h; sourceTree = "<group>"; };
 		662FD59F2BB55570008EF823 /* MediItems.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MediItems.m; sourceTree = "<group>"; };
+		662FD5A52BB69582008EF823 /* AddMediTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddMediTableViewCell.h; sourceTree = "<group>"; };
+		662FD5A62BB69582008EF823 /* AddMediTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddMediTableViewCell.m; sourceTree = "<group>"; };
+		662FD5A72BB69582008EF823 /* AddMediTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddMediTableViewCell.xib; sourceTree = "<group>"; };
+		662FD5AE2BB71D90008EF823 /* UIScrollView+Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+Helpers.h"; sourceTree = "<group>"; };
+		662FD5AF2BB71D91008EF823 /* UIScrollView+Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+Helpers.m"; sourceTree = "<group>"; };
 		66C7F9A82BB2F36A00C51C31 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		66D860DD2BB1B14400C70006 /* YakTong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YakTong.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66D860E02BB1B14400C70006 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -58,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				662FD5AC2BB6B1ED008EF823 /* SDWebImage in Frameworks */,
 				66C7F9AC2BB2F3DE00C51C31 /* FirebaseDatabase in Frameworks */,
 				66C7F9AE2BB2F3DE00C51C31 /* FirebaseFirestore in Frameworks */,
 			);
@@ -85,6 +95,25 @@
 			path = MedicationResponse;
 			sourceTree = "<group>";
 		};
+		662FD5A42BB5CBE9008EF823 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				662FD5A52BB69582008EF823 /* AddMediTableViewCell.h */,
+				662FD5A62BB69582008EF823 /* AddMediTableViewCell.m */,
+				662FD5A72BB69582008EF823 /* AddMediTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		662FD5AD2BB71D84008EF823 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				662FD5AE2BB71D90008EF823 /* UIScrollView+Helpers.h */,
+				662FD5AF2BB71D91008EF823 /* UIScrollView+Helpers.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		66D860D42BB1B14400C70006 = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +133,7 @@
 		66D860DF2BB1B14400C70006 /* YakTong */ = {
 			isa = PBXGroup;
 			children = (
+				662FD5AD2BB71D84008EF823 /* Utils */,
 				662FD5972BB45B7B008EF823 /* Models */,
 				66ED7AA82BB3F0890086CE20 /* Controllers */,
 				66D860E02BB1B14400C70006 /* AppDelegate.h */,
@@ -143,6 +173,7 @@
 		66ED7AB42BB3F7620086CE20 /* AddMedication */ = {
 			isa = PBXGroup;
 			children = (
+				662FD5A42BB5CBE9008EF823 /* Cell */,
 				66ED7AB12BB3F75C0086CE20 /* AddMedicationTableViewController.h */,
 				66ED7AB22BB3F75C0086CE20 /* AddMedicationTableViewController.m */,
 				66ED7AB52BB3F7860086CE20 /* AddMedicationTableViewController.storyboard */,
@@ -179,6 +210,7 @@
 			packageProductDependencies = (
 				66C7F9AB2BB2F3DE00C51C31 /* FirebaseDatabase */,
 				66C7F9AD2BB2F3DE00C51C31 /* FirebaseFirestore */,
+				662FD5AB2BB6B1ED008EF823 /* SDWebImage */,
 			);
 			productName = YakTong;
 			productReference = 66D860DD2BB1B14400C70006 /* YakTong.app */;
@@ -209,6 +241,7 @@
 			mainGroup = 66D860D42BB1B14400C70006;
 			packageReferences = (
 				66C7F9AA2BB2F3DE00C51C31 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				662FD5AA2BB6B1ED008EF823 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = 66D860DE2BB1B14400C70006 /* Products */;
 			projectDirPath = "";
@@ -228,6 +261,7 @@
 				66D860ED2BB1B14600C70006 /* Assets.xcassets in Resources */,
 				66D860F02BB1B14600C70006 /* Base in Resources */,
 				66C7F9A92BB2F36A00C51C31 /* GoogleService-Info.plist in Resources */,
+				662FD5A92BB69583008EF823 /* AddMediTableViewCell.xib in Resources */,
 				66D860EB2BB1B14400C70006 /* Base in Resources */,
 				66ED7AB02BB3F1EA0086CE20 /* MedicationTableViewController.storyboard in Resources */,
 				66ED7AB62BB3F7860086CE20 /* AddMedicationTableViewController.storyboard in Resources */,
@@ -245,10 +279,12 @@
 				66ED7ABA2BB3F90A0086CE20 /* YakTongTableViewController.m in Sources */,
 				66ED7AAD2BB3F1AC0086CE20 /* MedicationTableViewController.m in Sources */,
 				662FD5A02BB55570008EF823 /* MediItems.m in Sources */,
+				662FD5A82BB69583008EF823 /* AddMediTableViewCell.m in Sources */,
 				66D860F32BB1B14600C70006 /* main.m in Sources */,
 				66ED7AB32BB3F75C0086CE20 /* AddMedicationTableViewController.m in Sources */,
 				66D860E52BB1B14400C70006 /* SceneDelegate.m in Sources */,
 				662FD59B2BB45BC7008EF823 /* MedicationResponse.m in Sources */,
+				662FD5B02BB71D91008EF823 /* UIScrollView+Helpers.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,6 +510,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		662FD5AA2BB6B1ED008EF823 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.19.1;
+			};
+		};
 		66C7F9AA2BB2F3DE00C51C31 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -485,6 +529,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		662FD5AB2BB6B1ED008EF823 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 662FD5AA2BB6B1ED008EF823 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
 		66C7F9AB2BB2F3DE00C51C31 /* FirebaseDatabase */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 66C7F9AA2BB2F3DE00C51C31 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

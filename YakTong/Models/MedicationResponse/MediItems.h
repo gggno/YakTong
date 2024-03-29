@@ -4,20 +4,20 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MediItems : NSObject
 
-@property (nonatomic, assign) NSString * entpName;
-@property (nonatomic, assign) NSString * itemName;
-@property (nonatomic, assign) NSString * itemSeq;
-@property (nonatomic, assign) NSString * efcyQesitm;
-@property (nonatomic, assign) NSString * useMethodQesitm;
-@property (nonatomic, assign) NSString * atpnWarnQesitm;
-@property (nonatomic, assign) NSString * atpnQesitm;
-@property (nonatomic, assign) NSString * intrcQesitm;
-@property (nonatomic, assign) NSString * seQesitm;
-@property (nonatomic, assign) NSString * depositMethodQesitm;
-@property (nonatomic, assign) NSString * openDe;
-@property (nonatomic, assign) NSString * updateDe;
-@property (nonatomic, assign) NSString * itemImage;
-@property (nonatomic, assign) NSString * bizrno;
+@property (nonatomic, nullable, copy) NSString * entpName;
+@property (nonatomic, nullable, copy) NSString * itemName;
+@property (nonatomic, nullable, copy) NSString * itemSeq;
+@property (nonatomic, nullable, copy) NSString * efcyQesitm;
+@property (nonatomic, nullable, copy) NSString * useMethodQesitm;
+@property (nonatomic, nullable, copy) NSString * atpnWarnQesitm;
+@property (nonatomic, nullable, copy) NSString * atpnQesitm;
+@property (nonatomic, nullable, copy) NSString * intrcQesitm;
+@property (nonatomic, nullable, copy) NSString * seQesitm;
+@property (nonatomic, nullable, copy) NSString * depositMethodQesitm;
+@property (nonatomic, nullable, copy) NSString * openDe;
+@property (nonatomic, nullable, copy) NSString * updateDe;
+@property (nonatomic, nullable, copy) NSString * itemImage;
+@property (nonatomic, nullable, copy) NSString * bizrno;
 
 - (id)initWithDictionary:(NSDictionary<NSString *, id> *)jsonDictionary;
 

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AddMediTableViewCell" rowHeight="90" id="KGk-i7-Jjw" customClass="AddMediTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="457" height="108"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="457" height="108"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2WW-y2-ca5">
+                        <rect key="frame" x="0.0" y="9.6666666666666643" width="180" height="89"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                        <color key="tintColor" systemColor="systemGray3Color"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="180" id="530-of-3ye"/>
+                            <constraint firstAttribute="height" constant="90" id="Z9B-Kp-0JE"/>
+                        </constraints>
+                        <imageReference key="image" image="pills.fill" catalog="system" symbolScale="default"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G4e-d0-vqc">
+                        <rect key="frame" x="184" y="4" width="273" height="20.333333333333332"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3LR-St-HvN">
+                        <rect key="frame" x="184" y="89.666666666666671" width="273" height="14.333333333333329"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="2WW-y2-ca5" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="08e-Aj-2ag"/>
+                    <constraint firstItem="2WW-y2-ca5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="CSW-Z0-fGK"/>
+                    <constraint firstItem="G4e-d0-vqc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="QJU-4p-OiT"/>
+                    <constraint firstItem="G4e-d0-vqc" firstAttribute="leading" secondItem="2WW-y2-ca5" secondAttribute="trailing" constant="4" id="Td5-NW-EUg"/>
+                    <constraint firstItem="3LR-St-HvN" firstAttribute="leading" secondItem="2WW-y2-ca5" secondAttribute="trailing" constant="4" id="VOQ-id-B9x"/>
+                    <constraint firstAttribute="bottom" secondItem="3LR-St-HvN" secondAttribute="bottom" constant="4" id="hOC-oW-v0d"/>
+                    <constraint firstAttribute="trailing" secondItem="G4e-d0-vqc" secondAttribute="trailing" id="iCC-6d-Lte"/>
+                    <constraint firstAttribute="trailing" secondItem="3LR-St-HvN" secondAttribute="trailing" id="jFa-C6-het"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="efcyQesitmLabel" destination="3LR-St-HvN" id="Q8X-ss-psP"/>
+                <outlet property="itemNameLabel" destination="G4e-d0-vqc" id="D1s-p3-dh3"/>
+                <outlet property="mediImageView" destination="2WW-y2-ca5" id="e6i-l3-bsb"/>
+            </connections>
+            <point key="canvasLocation" x="150.38167938931298" y="9.8591549295774659"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="pills.fill" catalog="system" width="128" height="104"/>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
