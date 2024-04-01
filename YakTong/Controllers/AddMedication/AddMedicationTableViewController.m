@@ -33,7 +33,7 @@
     
     _searchTableView.delegate = self;
     _searchTableView.dataSource = self;
-    _searchTableView.rowHeight = 90;
+    _searchTableView.rowHeight = 100;
     
     UINib * addMediCellNib = [UINib nibWithNibName:@"AddMediTableViewCell" bundle:nil];
     [_searchTableView registerNib:addMediCellNib forCellReuseIdentifier:@"AddMediTableViewCell"];
@@ -158,9 +158,25 @@
     
     AddMediTableViewCell * cell = (AddMediTableViewCell *) [tableView dequeueReusableCellWithIdentifier:@"AddMediTableViewCell" forIndexPath:indexPath];
     
+    [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+    
     [cell configureCell:cellData];
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"%s, line: %d, indexPath.row: %ld",__func__, __LINE__, (long)indexPath.row);
+    NSLog(@"mediItemList[indexPath.row]: %@", mediItemList[indexPath.row].itemName);
+    
+    UIStoryboard * storyboard = [UIStoryboard storyboardWithName:@"MediInfoViewController" bundle:nil];
+    
+    MediInfoViewController * mediInfoVC = [storyboard instantiateViewControllerWithIdentifier:@"MediInfoViewController"];
+    
+    mediInfoVC.mediItem = mediItemList[indexPath.row];
+    
+    [[self navigationController] pushViewController:mediInfoVC animated:YES];
 }
 
 #pragma mark UIScrollViewDelegate

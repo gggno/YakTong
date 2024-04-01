@@ -13,6 +13,8 @@
 		662FD5A92BB69583008EF823 /* AddMediTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 662FD5A72BB69582008EF823 /* AddMediTableViewCell.xib */; };
 		662FD5AC2BB6B1ED008EF823 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 662FD5AB2BB6B1ED008EF823 /* SDWebImage */; };
 		662FD5B02BB71D91008EF823 /* UIScrollView+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 662FD5AF2BB71D91008EF823 /* UIScrollView+Helpers.m */; };
+		66524C1F2BBA879500CA369E /* MediInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66524C1D2BBA879500CA369E /* MediInfoViewController.m */; };
+		66524C222BBA885200CA369E /* MediInfoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66524C212BBA885200CA369E /* MediInfoViewController.storyboard */; };
 		66C7F9A92BB2F36A00C51C31 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 66C7F9A82BB2F36A00C51C31 /* GoogleService-Info.plist */; };
 		66C7F9AC2BB2F3DE00C51C31 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 66C7F9AB2BB2F3DE00C51C31 /* FirebaseDatabase */; };
 		66C7F9AE2BB2F3DE00C51C31 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 66C7F9AD2BB2F3DE00C51C31 /* FirebaseFirestore */; };
@@ -40,6 +42,9 @@
 		662FD5A72BB69582008EF823 /* AddMediTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddMediTableViewCell.xib; sourceTree = "<group>"; };
 		662FD5AE2BB71D90008EF823 /* UIScrollView+Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+Helpers.h"; sourceTree = "<group>"; };
 		662FD5AF2BB71D91008EF823 /* UIScrollView+Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+Helpers.m"; sourceTree = "<group>"; };
+		66524C1C2BBA879500CA369E /* MediInfoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MediInfoViewController.h; sourceTree = "<group>"; };
+		66524C1D2BBA879500CA369E /* MediInfoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MediInfoViewController.m; sourceTree = "<group>"; };
+		66524C212BBA885200CA369E /* MediInfoViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MediInfoViewController.storyboard; sourceTree = "<group>"; };
 		66C7F9A82BB2F36A00C51C31 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		66D860DD2BB1B14400C70006 /* YakTong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YakTong.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66D860E02BB1B14400C70006 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -114,6 +119,16 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		66524C1B2BBA875200CA369E /* MediInfo */ = {
+			isa = PBXGroup;
+			children = (
+				66524C1C2BBA879500CA369E /* MediInfoViewController.h */,
+				66524C1D2BBA879500CA369E /* MediInfoViewController.m */,
+				66524C212BBA885200CA369E /* MediInfoViewController.storyboard */,
+			);
+			path = MediInfo;
+			sourceTree = "<group>";
+		};
 		66D860D42BB1B14400C70006 = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +171,7 @@
 				66ED7AA92BB3F1010086CE20 /* Medication */,
 				66ED7AB42BB3F7620086CE20 /* AddMedication */,
 				66ED7AB72BB3F8890086CE20 /* YakTong */,
+				66524C1B2BBA875200CA369E /* MediInfo */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -258,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				66ED7ABC2BB3F9150086CE20 /* YakTongTableViewController.storyboard in Resources */,
+				66524C222BBA885200CA369E /* MediInfoViewController.storyboard in Resources */,
 				66D860ED2BB1B14600C70006 /* Assets.xcassets in Resources */,
 				66D860F02BB1B14600C70006 /* Base in Resources */,
 				66C7F9A92BB2F36A00C51C31 /* GoogleService-Info.plist in Resources */,
@@ -280,6 +297,7 @@
 				66ED7AAD2BB3F1AC0086CE20 /* MedicationTableViewController.m in Sources */,
 				662FD5A02BB55570008EF823 /* MediItems.m in Sources */,
 				662FD5A82BB69583008EF823 /* AddMediTableViewCell.m in Sources */,
+				66524C1F2BBA879500CA369E /* MediInfoViewController.m in Sources */,
 				66D860F32BB1B14600C70006 /* main.m in Sources */,
 				66ED7AB32BB3F75C0086CE20 /* AddMedicationTableViewController.m in Sources */,
 				66D860E52BB1B14400C70006 /* SceneDelegate.m in Sources */,

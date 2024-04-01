@@ -2,6 +2,7 @@
 #import "MedicationResponse.h"
 #import "AddMediTableViewCell.h"
 #import "UIScrollView+Helpers.h"
+#import "MediInfoViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

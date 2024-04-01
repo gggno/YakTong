@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Medi Info View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="MediInfoViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="MediInfoViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="1000"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pkf-ZV-460">
+                                <rect key="frame" x="0.0" y="59" width="393" height="907"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gAI-PD-kCD">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="856.33333333333337"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pills.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="hJk-Un-ZXZ">
+                                                <rect key="frame" x="0.0" y="0.6666666666666714" width="393" height="179"/>
+                                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                                <color key="tintColor" systemColor="systemGray3Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="180" id="PTm-BC-Xeo"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="제품명" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bZS-T2-7eP">
+                                                <rect key="frame" x="8" y="188" width="377" height="24"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="업체명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rTp-J3-Tex">
+                                                <rect key="frame" x="8" y="220" width="377" height="15.666666666666657"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="품목기준코드" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t8F-KJ-LEn">
+                                                <rect key="frame" x="8" y="243.66666666666669" width="377" height="15.666666666666686"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="37k-8h-4AQ">
+                                                <rect key="frame" x="8" y="291.33333333333326" width="377" height="557"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="rrX-ud-Z8L">
+                                                        <rect key="frame" x="0.0" y="0.0" width="377" height="46.333333333333336"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="효능(이 약의 효능은 무엇입니까?)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CAo-08-2Vx">
+                                                                <rect key="frame" x="0.0" y="0.0" width="226" height="20.333333333333332"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ye5-Ln-oXj">
+                                                                <rect key="frame" x="0.0" y="28.333333333333371" width="37.333333333333336" height="18"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="JCJ-hD-3oh">
+                                                        <rect key="frame" x="0.0" y="78.333333333333371" width="377" height="46.333333333333343"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="사용법(이 약은 어떻게 사용합니까?)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="22H-jp-sVj">
+                                                                <rect key="frame" x="0.0" y="0.0" width="240.66666666666666" height="20.333333333333332"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sze-n3-LVq">
+                                                                <rect key="frame" x="0.0" y="28.333333333333314" width="37.333333333333336" height="18"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="tNl-pf-3Ae">
+                                                        <rect key="frame" x="0.0" y="156.66666666666669" width="377" height="66.666666666666686"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="주의사항경고(이 약을 사용하기 전에 반드시 알아야 할 내용은 무엇입니까?)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tgo-bK-mfR">
+                                                                <rect key="frame" x="0.0" y="0.0" width="358.33333333333331" height="40.666666666666664"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sj0-70-nJb">
+                                                                <rect key="frame" x="0.0" y="48.666666666666629" width="37.333333333333336" height="18"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="pDu-c7-MZu">
+                                                        <rect key="frame" x="0.0" y="255.33333333333334" width="377" height="46.333333333333343"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="주의사항(이 약의 사용상 주의사항은 무엇입니까?)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pPy-SU-rJb">
+                                                                <rect key="frame" x="0.0" y="0.0" width="332.66666666666669" height="20.333333333333332"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MOt-da-ed7">
+                                                                <rect key="frame" x="0.0" y="28.333333333333371" width="37.333333333333336" height="18"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bJ8-Ad-8fV">
+                                                        <rect key="frame" x="0.0" y="333.66666666666669" width="377" height="66.666666666666686"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="상호작용(이 약을 사용하는 동안 주의해야 할 약 또는 음식은 무엇입니까?)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o7K-TK-gLN">
+                                                                <rect key="frame" x="0.0" y="0.0" width="347.33333333333331" height="40.666666666666664"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2h2-gq-PVC">
+                                                                <rect key="frame" x="0.0" y="48.666666666666629" width="37.333333333333336" height="18"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="VXK-hn-K4M">
+                                                        <rect key="frame" x="0.0" y="432.33333333333331" width="377" height="46.333333333333314"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="부작용(이 약은 어떤 이상반응이 나타날 수 있습니까?)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Izj-hl-fGf">
+                                                                <rect key="frame" x="0.0" y="0.0" width="355.33333333333331" height="20.333333333333332"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Eo-ci-BGc">
+                                                                <rect key="frame" x="0.0" y="28.333333333333371" width="37.333333333333336" height="18"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dln-5k-KU9">
+                                                        <rect key="frame" x="0.0" y="510.66666666666669" width="377" height="46.333333333333314"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="보관법(이 약은 어떻게 보관해야 합니까?)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nxI-yX-wMH">
+                                                                <rect key="frame" x="0.0" y="0.0" width="274" height="20.333333333333332"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rl7-1X-jnO">
+                                                                <rect key="frame" x="0.0" y="28.333333333333371" width="37.333333333333336" height="18"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="t8F-KJ-LEn" firstAttribute="top" secondItem="rTp-J3-Tex" secondAttribute="bottom" constant="8" id="CMj-S5-cc9"/>
+                                            <constraint firstItem="t8F-KJ-LEn" firstAttribute="leading" secondItem="gAI-PD-kCD" secondAttribute="leading" constant="8" id="HG0-99-LxL"/>
+                                            <constraint firstAttribute="trailing" secondItem="hJk-Un-ZXZ" secondAttribute="trailing" id="HzK-hf-3iZ"/>
+                                            <constraint firstItem="rTp-J3-Tex" firstAttribute="leading" secondItem="gAI-PD-kCD" secondAttribute="leading" constant="8" id="LSp-km-qoe"/>
+                                            <constraint firstAttribute="bottom" secondItem="37k-8h-4AQ" secondAttribute="bottom" constant="8" id="Nwm-5U-fdm"/>
+                                            <constraint firstAttribute="trailing" secondItem="t8F-KJ-LEn" secondAttribute="trailing" constant="8" id="V2d-eg-3ng"/>
+                                            <constraint firstItem="37k-8h-4AQ" firstAttribute="top" secondItem="t8F-KJ-LEn" secondAttribute="bottom" constant="32" id="We8-2O-JtZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="rTp-J3-Tex" secondAttribute="trailing" constant="8" id="gMq-5j-TTu"/>
+                                            <constraint firstItem="rTp-J3-Tex" firstAttribute="top" secondItem="bZS-T2-7eP" secondAttribute="bottom" constant="8" id="j2R-Md-6Pw"/>
+                                            <constraint firstAttribute="trailing" secondItem="bZS-T2-7eP" secondAttribute="trailing" constant="8" id="kFJ-hJ-2dh"/>
+                                            <constraint firstItem="bZS-T2-7eP" firstAttribute="leading" secondItem="gAI-PD-kCD" secondAttribute="leading" constant="8" id="lEU-5e-IOC"/>
+                                            <constraint firstItem="hJk-Un-ZXZ" firstAttribute="top" secondItem="gAI-PD-kCD" secondAttribute="top" id="mQY-gb-hrr"/>
+                                            <constraint firstAttribute="trailing" secondItem="37k-8h-4AQ" secondAttribute="trailing" constant="8" id="nys-9p-5tc"/>
+                                            <constraint firstItem="37k-8h-4AQ" firstAttribute="leading" secondItem="gAI-PD-kCD" secondAttribute="leading" constant="8" id="q0o-CM-Ckf"/>
+                                            <constraint firstItem="bZS-T2-7eP" firstAttribute="top" secondItem="hJk-Un-ZXZ" secondAttribute="bottom" constant="8" id="s7y-Uc-gP0"/>
+                                            <constraint firstItem="hJk-Un-ZXZ" firstAttribute="leading" secondItem="gAI-PD-kCD" secondAttribute="leading" id="whG-TQ-lNf"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="gAI-PD-kCD" firstAttribute="top" secondItem="cyN-49-R7Y" secondAttribute="top" id="Aps-5R-pKd"/>
+                                    <constraint firstItem="gAI-PD-kCD" firstAttribute="bottom" secondItem="cyN-49-R7Y" secondAttribute="bottom" id="W1e-nz-SgL"/>
+                                    <constraint firstItem="gAI-PD-kCD" firstAttribute="leading" secondItem="cyN-49-R7Y" secondAttribute="leading" id="eRE-kF-stg"/>
+                                    <constraint firstItem="gAI-PD-kCD" firstAttribute="trailing" secondItem="cyN-49-R7Y" secondAttribute="trailing" id="egj-pu-NQm"/>
+                                    <constraint firstItem="gAI-PD-kCD" firstAttribute="width" secondItem="aPJ-Gg-v3e" secondAttribute="width" id="qHY-Iz-SGc"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="cyN-49-R7Y"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="aPJ-Gg-v3e"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Pkf-ZV-460" secondAttribute="trailing" id="K7w-eS-9Mt"/>
+                            <constraint firstItem="Pkf-ZV-460" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="XbO-mm-f8s"/>
+                            <constraint firstItem="Pkf-ZV-460" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="rbJ-bV-M59"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Pkf-ZV-460" secondAttribute="bottom" id="z00-ll-lVi"/>
+                        </constraints>
+                    </view>
+                    <size key="freeformSize" width="393" height="1000"/>
+                    <connections>
+                        <outlet property="atpnQesitmLabel" destination="MOt-da-ed7" id="KwQ-tv-EYk"/>
+                        <outlet property="atpnWarnQesitmLabel" destination="Sj0-70-nJb" id="DIO-8A-Pee"/>
+                        <outlet property="depositMethodQesitm" destination="Rl7-1X-jnO" id="zzn-qu-T0b"/>
+                        <outlet property="efcyQesitmLabel" destination="Ye5-Ln-oXj" id="5to-dO-HfS"/>
+                        <outlet property="entpNameLabel" destination="rTp-J3-Tex" id="6ZN-iW-MgL"/>
+                        <outlet property="intrcQesitmLabel" destination="2h2-gq-PVC" id="T55-Pl-eKm"/>
+                        <outlet property="itemNameLabel" destination="bZS-T2-7eP" id="XzA-De-M1D"/>
+                        <outlet property="itemSeqLabel" destination="t8F-KJ-LEn" id="5wv-Kt-8Vt"/>
+                        <outlet property="mediImageView" destination="hJk-Un-ZXZ" id="fBb-ai-nsn"/>
+                        <outlet property="seQesitmLabel" destination="6Eo-ci-BGc" id="R5a-hz-vXd"/>
+                        <outlet property="useMethodQesitm" destination="sze-n3-LVq" id="6eF-us-Z30"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="46.564885496183201" y="-28.169014084507044"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pills.fill" catalog="system" width="128" height="104"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
