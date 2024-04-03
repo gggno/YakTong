@@ -67,48 +67,35 @@
             MediInfoViewController * strongSelf = weakSelf;
             
             if (strongSelf) {
+                // 내비게이션 아이템 설정
+                strongSelf->_mediListBtn = [[UIBarButtonItem alloc]
+                                                initWithImage:[UIImage systemImageNamed:@"plus"]
+                                                style:UIBarButtonItemStylePlain
+                                                target:self
+                                                action:@selector(mediListBtnTapped:)];
+                [strongSelf->_mediListBtn setTintColor:UIColor.blueColor];
+                
+                strongSelf->_yakTongBtn = [[UIBarButtonItem alloc]
+                                               initWithImage:[UIImage systemImageNamed:@"pill.fill"]
+                                               style:UIBarButtonItemStylePlain
+                                               target:self
+                                               action:@selector(yakTongBtnTapped:)];
+                [strongSelf->_yakTongBtn setTintColor:UIColor.greenColor];
+                
                 if ([snapshot.documents count] > 0) {
                     NSLog(@"이미 해당 의약품이 약통에 존재합니다.");
                     strongSelf->_yakTongState = NO;
-                    
-                    // 내비게이션 아이템 설정
-                    strongSelf->_mediListBtn = [[UIBarButtonItem alloc]
-                                                    initWithImage:[UIImage systemImageNamed:@"plus"]
-                                                    style:UIBarButtonItemStylePlain
-                                                    target:self
-                                                    action:@selector(mediListBtnTapped:)];
-                    [strongSelf->_mediListBtn setTintColor:UIColor.blueColor];
-                    
-                    strongSelf->_yakTongBtn = [[UIBarButtonItem alloc]
-                                                   initWithImage:[UIImage systemImageNamed:@"minus"]
-                                                   style:UIBarButtonItemStylePlain
-                                                   target:self
-                                                   action:@selector(yakTongBtnTapped:)];
                     [strongSelf->_yakTongBtn setTintColor:UIColor.greenColor];
-                    
-                    self.navigationItem.rightBarButtonItems = @[strongSelf->_yakTongBtn, strongSelf->_mediListBtn];
                     
                 } else {
                     NSLog(@"해당 의약품이 약통에 존재하지 않습니다. 추가할 수 있습니다.");
                     strongSelf->_yakTongState = YES;
-                    
-                    // 내비게이션 아이템 설정
-                    strongSelf->_mediListBtn = [[UIBarButtonItem alloc]
-                                                    initWithImage:[UIImage systemImageNamed:@"plus"]
-                                                    style:UIBarButtonItemStylePlain
-                                                    target:self
-                                                    action:@selector(mediListBtnTapped:)];
-                    [strongSelf->_mediListBtn setTintColor:UIColor.blueColor];
-                    
-                    strongSelf->_yakTongBtn = [[UIBarButtonItem alloc]
-                                                   initWithImage:[UIImage systemImageNamed:@"plus"]
-                                                   style:UIBarButtonItemStylePlain
-                                                   target:self
-                                                   action:@selector(yakTongBtnTapped:)];
-                    [strongSelf->_yakTongBtn setTintColor:UIColor.greenColor];
-                    
-                    self.navigationItem.rightBarButtonItems = @[strongSelf->_yakTongBtn, strongSelf->_mediListBtn];
+                    [strongSelf->_yakTongBtn setTintColor:UIColor.grayColor];
                 }
+                
+                // 복약리스트 if 문도 넣어야됨
+                
+                self.navigationItem.rightBarButtonItems = @[strongSelf->_yakTongBtn, strongSelf->_mediListBtn];
             }
         }
     }];
@@ -145,6 +132,7 @@
 {
     NSLog(@"%s, line: %d, %@",__func__, __LINE__, @"");
     
+    
 }
 
 - (void)yakTongBtnTapped:(UIButton *)sender
@@ -180,7 +168,7 @@
                 if (strongSelf) {
                     strongSelf->_yakTongState = NO;
                     dispatch_async(dispatch_get_main_queue(), ^{
-                        [strongSelf->_yakTongBtn setImage:[UIImage systemImageNamed:@"minus"]];
+                        [strongSelf->_yakTongBtn setTintColor:UIColor.greenColor];
                     });
                 }
                 
@@ -212,7 +200,7 @@
                 if (strongSelf) {
                     strongSelf->_yakTongState = YES;
                     dispatch_async(dispatch_get_main_queue(), ^{
-                        [strongSelf->_yakTongBtn setImage:[UIImage systemImageNamed:@"plus"]];
+                        [strongSelf->_yakTongBtn setTintColor:UIColor.grayColor];
                     });
                 }
                 
@@ -229,10 +217,9 @@
                 [self presentViewController:alert animated:YES completion:nil];
               }
         }];
-        
     }
     
-
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"yakTongDataReLoad" object:self];
 }
 
 @end

@@ -1,5 +1,8 @@
 #import <Foundation/Foundation.h>
 
+@import FirebaseCore;
+@import FirebaseFirestore;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MediItems : NSObject
@@ -20,6 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, nullable, copy) NSString * bizrno;
 
 - (id)initWithDictionary:(NSDictionary<NSString *, id> *)jsonDictionary;
+- (id)initWithSnapshot:(FIRDocumentSnapshot *)document;
 
 @end
 

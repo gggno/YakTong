@@ -15,6 +15,8 @@
 		662FD5B02BB71D91008EF823 /* UIScrollView+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 662FD5AF2BB71D91008EF823 /* UIScrollView+Helpers.m */; };
 		66524C1F2BBA879500CA369E /* MediInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66524C1D2BBA879500CA369E /* MediInfoViewController.m */; };
 		66524C222BBA885200CA369E /* MediInfoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66524C212BBA885200CA369E /* MediInfoViewController.storyboard */; };
+		66524C272BBD3CB100CA369E /* YakTongCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 66524C252BBD3CB100CA369E /* YakTongCollectionViewCell.m */; };
+		66524C282BBD3CB100CA369E /* YakTongCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66524C262BBD3CB100CA369E /* YakTongCollectionViewCell.xib */; };
 		66C7F9A92BB2F36A00C51C31 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 66C7F9A82BB2F36A00C51C31 /* GoogleService-Info.plist */; };
 		66C7F9AC2BB2F3DE00C51C31 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 66C7F9AB2BB2F3DE00C51C31 /* FirebaseDatabase */; };
 		66C7F9AE2BB2F3DE00C51C31 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 66C7F9AD2BB2F3DE00C51C31 /* FirebaseFirestore */; };
@@ -28,8 +30,8 @@
 		66ED7AB02BB3F1EA0086CE20 /* MedicationTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66ED7AAF2BB3F1EA0086CE20 /* MedicationTableViewController.storyboard */; };
 		66ED7AB32BB3F75C0086CE20 /* AddMedicationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66ED7AB22BB3F75C0086CE20 /* AddMedicationTableViewController.m */; };
 		66ED7AB62BB3F7860086CE20 /* AddMedicationTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66ED7AB52BB3F7860086CE20 /* AddMedicationTableViewController.storyboard */; };
-		66ED7ABA2BB3F90A0086CE20 /* YakTongTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66ED7AB92BB3F90A0086CE20 /* YakTongTableViewController.m */; };
-		66ED7ABC2BB3F9150086CE20 /* YakTongTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66ED7ABB2BB3F9150086CE20 /* YakTongTableViewController.storyboard */; };
+		66ED7ABA2BB3F90A0086CE20 /* YakTongCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66ED7AB92BB3F90A0086CE20 /* YakTongCollectionViewController.m */; };
+		66ED7ABC2BB3F9150086CE20 /* YakTongCollectionViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66ED7ABB2BB3F9150086CE20 /* YakTongCollectionViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,9 @@
 		66524C1C2BBA879500CA369E /* MediInfoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MediInfoViewController.h; sourceTree = "<group>"; };
 		66524C1D2BBA879500CA369E /* MediInfoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MediInfoViewController.m; sourceTree = "<group>"; };
 		66524C212BBA885200CA369E /* MediInfoViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MediInfoViewController.storyboard; sourceTree = "<group>"; };
+		66524C242BBD3CB100CA369E /* YakTongCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YakTongCollectionViewCell.h; sourceTree = "<group>"; };
+		66524C252BBD3CB100CA369E /* YakTongCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YakTongCollectionViewCell.m; sourceTree = "<group>"; };
+		66524C262BBD3CB100CA369E /* YakTongCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YakTongCollectionViewCell.xib; sourceTree = "<group>"; };
 		66C7F9A82BB2F36A00C51C31 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		66D860DD2BB1B14400C70006 /* YakTong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YakTong.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66D860E02BB1B14400C70006 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -62,9 +67,9 @@
 		66ED7AB12BB3F75C0086CE20 /* AddMedicationTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddMedicationTableViewController.h; sourceTree = "<group>"; };
 		66ED7AB22BB3F75C0086CE20 /* AddMedicationTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddMedicationTableViewController.m; sourceTree = "<group>"; };
 		66ED7AB52BB3F7860086CE20 /* AddMedicationTableViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddMedicationTableViewController.storyboard; sourceTree = "<group>"; };
-		66ED7AB82BB3F90A0086CE20 /* YakTongTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YakTongTableViewController.h; sourceTree = "<group>"; };
-		66ED7AB92BB3F90A0086CE20 /* YakTongTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YakTongTableViewController.m; sourceTree = "<group>"; };
-		66ED7ABB2BB3F9150086CE20 /* YakTongTableViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = YakTongTableViewController.storyboard; sourceTree = "<group>"; };
+		66ED7AB82BB3F90A0086CE20 /* YakTongCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YakTongCollectionViewController.h; sourceTree = "<group>"; };
+		66ED7AB92BB3F90A0086CE20 /* YakTongCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YakTongCollectionViewController.m; sourceTree = "<group>"; };
+		66ED7ABB2BB3F9150086CE20 /* YakTongCollectionViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = YakTongCollectionViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +132,16 @@
 				66524C212BBA885200CA369E /* MediInfoViewController.storyboard */,
 			);
 			path = MediInfo;
+			sourceTree = "<group>";
+		};
+		66524C232BBD3C8A00CA369E /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				66524C242BBD3CB100CA369E /* YakTongCollectionViewCell.h */,
+				66524C252BBD3CB100CA369E /* YakTongCollectionViewCell.m */,
+				66524C262BBD3CB100CA369E /* YakTongCollectionViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		66D860D42BB1B14400C70006 = {
@@ -200,9 +215,10 @@
 		66ED7AB72BB3F8890086CE20 /* YakTong */ = {
 			isa = PBXGroup;
 			children = (
-				66ED7AB82BB3F90A0086CE20 /* YakTongTableViewController.h */,
-				66ED7AB92BB3F90A0086CE20 /* YakTongTableViewController.m */,
-				66ED7ABB2BB3F9150086CE20 /* YakTongTableViewController.storyboard */,
+				66524C232BBD3C8A00CA369E /* Cell */,
+				66ED7AB82BB3F90A0086CE20 /* YakTongCollectionViewController.h */,
+				66ED7AB92BB3F90A0086CE20 /* YakTongCollectionViewController.m */,
+				66ED7ABB2BB3F9150086CE20 /* YakTongCollectionViewController.storyboard */,
 			);
 			path = YakTong;
 			sourceTree = "<group>";
@@ -273,7 +289,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66ED7ABC2BB3F9150086CE20 /* YakTongTableViewController.storyboard in Resources */,
+				66ED7ABC2BB3F9150086CE20 /* YakTongCollectionViewController.storyboard in Resources */,
 				66524C222BBA885200CA369E /* MediInfoViewController.storyboard in Resources */,
 				66D860ED2BB1B14600C70006 /* Assets.xcassets in Resources */,
 				66D860F02BB1B14600C70006 /* Base in Resources */,
@@ -281,6 +297,7 @@
 				662FD5A92BB69583008EF823 /* AddMediTableViewCell.xib in Resources */,
 				66D860EB2BB1B14400C70006 /* Base in Resources */,
 				66ED7AB02BB3F1EA0086CE20 /* MedicationTableViewController.storyboard in Resources */,
+				66524C282BBD3CB100CA369E /* YakTongCollectionViewCell.xib in Resources */,
 				66ED7AB62BB3F7860086CE20 /* AddMedicationTableViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,11 +310,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				66D860E22BB1B14400C70006 /* AppDelegate.m in Sources */,
-				66ED7ABA2BB3F90A0086CE20 /* YakTongTableViewController.m in Sources */,
+				66ED7ABA2BB3F90A0086CE20 /* YakTongCollectionViewController.m in Sources */,
 				66ED7AAD2BB3F1AC0086CE20 /* MedicationTableViewController.m in Sources */,
 				662FD5A02BB55570008EF823 /* MediItems.m in Sources */,
 				662FD5A82BB69583008EF823 /* AddMediTableViewCell.m in Sources */,
 				66524C1F2BBA879500CA369E /* MediInfoViewController.m in Sources */,
+				66524C272BBD3CB100CA369E /* YakTongCollectionViewCell.m in Sources */,
 				66D860F32BB1B14600C70006 /* main.m in Sources */,
 				66ED7AB32BB3F75C0086CE20 /* AddMedicationTableViewController.m in Sources */,
 				66D860E52BB1B14400C70006 /* SceneDelegate.m in Sources */,
