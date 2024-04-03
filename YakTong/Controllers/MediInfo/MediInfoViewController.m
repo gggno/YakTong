@@ -14,6 +14,13 @@
 @property (weak, nonatomic) IBOutlet UILabel *seQesitmLabel;
 @property (weak, nonatomic) IBOutlet UILabel *depositMethodQesitm;
 
+@property (strong, nonatomic) UIBarButtonItem *mediListBtn;
+@property (strong, nonatomic) UIBarButtonItem *yakTongBtn;
+
+@property (weak, nonatomic, nullable) FIRFirestore *db;
+
+@property (nonatomic, assign) BOOL yakTongState;
+
 @end
 
 @implementation MediInfoViewController
@@ -22,8 +29,8 @@
     [super viewDidLoad];
     NSLog(@"%s, line: %d, %@",__func__, __LINE__, @"");
     
-    
     [self initialSetting];
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -42,24 +49,69 @@
 
 - (void)initialSetting
 {
-    [self setTitle:@"상세정보"];
+    NSLog(@"%s, line: %d, %@",__func__, __LINE__, @"");
 
-    // 내비게이션 아이템 설정
-    UIBarButtonItem *mediListBtn = [[UIBarButtonItem alloc]
-                                    initWithImage:[UIImage systemImageNamed:@"plus"]
-                                    style:UIBarButtonItemStylePlain
-                                    target:self
-                                    action:@selector(mediListBtnTapped:)];
-    [mediListBtn setTintColor:UIColor.blueColor];
+    [self setTitle:@"상세정보"];
     
-    UIBarButtonItem *yakTongBtn = [[UIBarButtonItem alloc]
-                                   initWithImage:[UIImage systemImageNamed:@"plus"]
-                                   style:UIBarButtonItemStylePlain
-                                   target:self
-                                   action:@selector(yakTongBtnTapped:)];
-    [yakTongBtn setTintColor:UIColor.greenColor];
+    _db = [FIRFirestore firestore];
     
-    self.navigationItem.rightBarButtonItems = @[yakTongBtn, mediListBtn];
+    FIRCollectionReference *yakTongCollection = [self.db collectionWithPath:@"yakTong"];
+    FIRQuery *query = [yakTongCollection queryWhereField:@"itemSeq" isEqualTo:_mediItem.itemSeq];
+
+    [query getDocumentsWithCompletion:^(FIRQuerySnapshot *snapshot, NSError *error) {
+        if (error != nil) {
+            NSLog(@"Error getting documents: %@", error);
+        } else {
+            __weak MediInfoViewController * weakSelf = self;
+            
+            MediInfoViewController * strongSelf = weakSelf;
+            
+            if (strongSelf) {
+                if ([snapshot.documents count] > 0) {
+                    NSLog(@"이미 해당 의약품이 약통에 존재합니다.");
+                    strongSelf->_yakTongState = NO;
+                    
+                    // 내비게이션 아이템 설정
+                    strongSelf->_mediListBtn = [[UIBarButtonItem alloc]
+                                                    initWithImage:[UIImage systemImageNamed:@"plus"]
+                                                    style:UIBarButtonItemStylePlain
+                                                    target:self
+                                                    action:@selector(mediListBtnTapped:)];
+                    [strongSelf->_mediListBtn setTintColor:UIColor.blueColor];
+                    
+                    strongSelf->_yakTongBtn = [[UIBarButtonItem alloc]
+                                                   initWithImage:[UIImage systemImageNamed:@"minus"]
+                                                   style:UIBarButtonItemStylePlain
+                                                   target:self
+                                                   action:@selector(yakTongBtnTapped:)];
+                    [strongSelf->_yakTongBtn setTintColor:UIColor.greenColor];
+                    
+                    self.navigationItem.rightBarButtonItems = @[strongSelf->_yakTongBtn, strongSelf->_mediListBtn];
+                    
+                } else {
+                    NSLog(@"해당 의약품이 약통에 존재하지 않습니다. 추가할 수 있습니다.");
+                    strongSelf->_yakTongState = YES;
+                    
+                    // 내비게이션 아이템 설정
+                    strongSelf->_mediListBtn = [[UIBarButtonItem alloc]
+                                                    initWithImage:[UIImage systemImageNamed:@"plus"]
+                                                    style:UIBarButtonItemStylePlain
+                                                    target:self
+                                                    action:@selector(mediListBtnTapped:)];
+                    [strongSelf->_mediListBtn setTintColor:UIColor.blueColor];
+                    
+                    strongSelf->_yakTongBtn = [[UIBarButtonItem alloc]
+                                                   initWithImage:[UIImage systemImageNamed:@"plus"]
+                                                   style:UIBarButtonItemStylePlain
+                                                   target:self
+                                                   action:@selector(yakTongBtnTapped:)];
+                    [strongSelf->_yakTongBtn setTintColor:UIColor.greenColor];
+                    
+                    self.navigationItem.rightBarButtonItems = @[strongSelf->_yakTongBtn, strongSelf->_mediListBtn];
+                }
+            }
+        }
+    }];
     
     // 약 상세정보 세팅
     if (![_mediItem.itemImage isKindOfClass:[NSNull class]]) {
@@ -92,12 +144,94 @@
 - (void)mediListBtnTapped:(UIButton *)sender
 {
     NSLog(@"%s, line: %d, %@",__func__, __LINE__, @"");
-
+    
 }
 
 - (void)yakTongBtnTapped:(UIButton *)sender
 {
     NSLog(@"%s, line: %d, %@",__func__, __LINE__, @"");
+    
+    if (_yakTongState) { // 추가
+        FIRDocumentReference *newyakTongRef = [[self.db collectionWithPath:@"yakTong"] documentWithPath:_mediItem.itemSeq];
+        
+        NSDictionary *yakTongData = @{
+            @"itemSeq": _mediItem.itemSeq,
+            @"entpName": _mediItem.entpName,
+            @"itemName": _mediItem.itemName,
+            @"efcyQesitm": _mediItem.efcyQesitm,
+            @"useMethodQesitm": _mediItem.useMethodQesitm,
+            @"atpnWarnQesitm": _mediItem.atpnWarnQesitm,
+            @"atpnQesitm": _mediItem.atpnQesitm,
+            @"intrcQesitm": _mediItem.intrcQesitm,
+            @"seQesitm": _mediItem.seQesitm,
+            @"depositMethodQesitm": _mediItem.depositMethodQesitm,
+            @"itemImage": _mediItem.itemImage
+        };
+        
+        [newyakTongRef setData:yakTongData completion:^(NSError * _Nullable error) {
+            
+            if (error) {
+                NSLog(@"약통에 추가하는 과정에서 에러가 발생하였습니다. 에러내용: %@", error);
+            } else {
+                NSLog(@"약통에 추가되었습니다.");
+                __weak MediInfoViewController * weakSelf = self;
+                
+                MediInfoViewController * strongSelf = weakSelf;
+                if (strongSelf) {
+                    strongSelf->_yakTongState = NO;
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [strongSelf->_yakTongBtn setImage:[UIImage systemImageNamed:@"minus"]];
+                    });
+                }
+                
+                NSString *message = [NSString stringWithFormat:@"%@이(가) 약통에 추가되었습니다.", self->_mediItem.itemName];
+                
+                UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"약통에 추가"
+                                                                               message:message
+                                                                        preferredStyle:UIAlertControllerStyleAlert];
+                
+                UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"확인"
+                                                                        style:UIAlertActionStyleDefault
+                                                                      handler:^(UIAlertAction * action) {}];
+                [alert addAction:defaultAction];
+                [self presentViewController:alert animated:YES completion:nil];
+            }
+        }];
+        
+    } else { // 삭제
+        [[[self.db collectionWithPath:@"yakTong"] documentWithPath:_mediItem.itemSeq]
+            deleteDocumentWithCompletion:^(NSError * _Nullable error) {
+            if (error != nil) {
+                NSLog(@"약통에 삭제하는 과정에서 에러가 발생하였습니다. 에러내용: %@", error);
+                
+            } else {
+                NSLog(@"약통에서 해당 약품이 삭제되었습니다.");
+                __weak MediInfoViewController * weakSelf = self;
+                
+                MediInfoViewController * strongSelf = weakSelf;
+                if (strongSelf) {
+                    strongSelf->_yakTongState = YES;
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [strongSelf->_yakTongBtn setImage:[UIImage systemImageNamed:@"plus"]];
+                    });
+                }
+                
+                NSString *message = [NSString stringWithFormat:@"%@이(가) 약통에서 삭제되었습니다.", self->_mediItem.itemName];
+                
+                UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"약통에서 삭제"
+                                                                               message:message
+                                                                        preferredStyle:UIAlertControllerStyleAlert];
+                
+                UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"확인"
+                                                                        style:UIAlertActionStyleDefault
+                                                                      handler:^(UIAlertAction * action) {}];
+                [alert addAction:defaultAction];
+                [self presentViewController:alert animated:YES completion:nil];
+              }
+        }];
+        
+    }
+    
 
 }
 

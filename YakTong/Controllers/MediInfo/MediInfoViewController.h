@@ -2,6 +2,8 @@
 #import "MediItems.h"
 
 @import SDWebImage;
+@import FirebaseCore;
+@import FirebaseFirestore;
 
 NS_ASSUME_NONNULL_BEGIN
 

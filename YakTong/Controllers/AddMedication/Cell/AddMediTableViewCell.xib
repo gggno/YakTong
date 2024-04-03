@@ -28,27 +28,28 @@
                         </constraints>
                         <imageReference key="image" image="pills.fill" catalog="system" symbolScale="default"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G4e-d0-vqc">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G4e-d0-vqc">
                         <rect key="frame" x="188" y="7.9999999999999982" width="261" height="20.333333333333329"/>
                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3LR-St-HvN">
-                        <rect key="frame" x="188" y="92.666666666666671" width="31" height="14.333333333333329"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3LR-St-HvN">
+                        <rect key="frame" x="188" y="92.666666666666671" width="261" height="14.333333333333329"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="G4e-d0-vqc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="085-XH-Zla"/>
                     <constraint firstItem="2WW-y2-ca5" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="08e-Aj-2ag"/>
-                    <constraint firstItem="3LR-St-HvN" firstAttribute="leading" secondItem="2WW-y2-ca5" secondAttribute="trailing" constant="8" id="3wa-Zz-W2Y"/>
                     <constraint firstItem="2WW-y2-ca5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="CSW-Z0-fGK"/>
-                    <constraint firstItem="G4e-d0-vqc" firstAttribute="leading" secondItem="2WW-y2-ca5" secondAttribute="trailing" constant="8" id="JwT-bW-xmz"/>
-                    <constraint firstItem="G4e-d0-vqc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="qhJ-xw-eQQ"/>
-                    <constraint firstAttribute="bottom" secondItem="3LR-St-HvN" secondAttribute="bottom" constant="8" id="wjv-Kp-src"/>
-                    <constraint firstAttribute="trailing" secondItem="G4e-d0-vqc" secondAttribute="trailing" constant="8" id="zYC-I9-EFM"/>
+                    <constraint firstAttribute="bottom" secondItem="3LR-St-HvN" secondAttribute="bottom" constant="8" id="HLS-S1-Yeh"/>
+                    <constraint firstAttribute="trailing" secondItem="3LR-St-HvN" secondAttribute="trailing" constant="8" id="IUW-qb-o0b"/>
+                    <constraint firstItem="G4e-d0-vqc" firstAttribute="leading" secondItem="2WW-y2-ca5" secondAttribute="trailing" constant="8" id="d9a-ee-dZw"/>
+                    <constraint firstItem="3LR-St-HvN" firstAttribute="leading" secondItem="2WW-y2-ca5" secondAttribute="trailing" constant="8" id="kVF-bi-4Z2"/>
+                    <constraint firstAttribute="trailing" secondItem="G4e-d0-vqc" secondAttribute="trailing" constant="8" id="ug7-fc-7VC"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
