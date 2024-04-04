@@ -29,6 +29,7 @@
 -(void)initialSetting
 {
     NSLog(@"%s, line: %d, %@",__func__, __LINE__, @"");
+    [self setTitle:@"약통"];
     
     [self setCollectionView];
     

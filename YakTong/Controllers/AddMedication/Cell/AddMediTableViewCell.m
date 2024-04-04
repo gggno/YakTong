@@ -20,8 +20,17 @@
     } else {
         _mediImageView.image = [UIImage systemImageNamed:@"pills.fill"];
     }
-    [_itemNameLabel setText:cellData.itemName];
-    [_efcyQesitmLabel setText:cellData.efcyQesitm];
+    if (![cellData.itemName isKindOfClass:[NSNull class]]) {
+        [_itemNameLabel setText:cellData.itemName];
+    } else {
+        [_itemNameLabel setText:@"정보없음"];
+    }
+    
+    if (![cellData.efcyQesitm isKindOfClass:[NSNull class]]) {
+        [_efcyQesitmLabel setText:cellData.efcyQesitm];
+    } else {
+        [_efcyQesitmLabel setText:@"정보없음"];
+    }    
 }
 
 @end
