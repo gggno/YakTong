@@ -11,6 +11,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MedicationTableViewController : UIViewController
 
+- (void)initialSetting;
+
+- (void)mediListBtnTapped:(UIButton *)sender;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -174,15 +174,7 @@
                 
                 NSString *message = [NSString stringWithFormat:@"%@이(가) 약통에 추가되었습니다.", self->_mediItem.itemName];
                 
-                UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"약통에 추가"
-                                                                               message:message
-                                                                        preferredStyle:UIAlertControllerStyleAlert];
-                
-                UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"확인"
-                                                                        style:UIAlertActionStyleDefault
-                                                                      handler:^(UIAlertAction * action) {}];
-                [alert addAction:defaultAction];
-                [self presentViewController:alert animated:YES completion:nil];
+                [UIAlertController showCustomAlertWithTitle:@"약통에 추가" message:message inViewController:self];
             }
         }];
         
@@ -206,15 +198,7 @@
                 
                 NSString *message = [NSString stringWithFormat:@"%@이(가) 약통에서 삭제되었습니다.", self->_mediItem.itemName];
                 
-                UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"약통에서 삭제"
-                                                                               message:message
-                                                                        preferredStyle:UIAlertControllerStyleAlert];
-                
-                UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"확인"
-                                                                        style:UIAlertActionStyleDefault
-                                                                      handler:^(UIAlertAction * action) {}];
-                [alert addAction:defaultAction];
-                [self presentViewController:alert animated:YES completion:nil];
+                [UIAlertController showCustomAlertWithTitle:@"약통에서 삭제" message:message inViewController:self];
               }
         }];
     }

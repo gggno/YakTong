@@ -9,14 +9,21 @@
 /* Begin PBXBuildFile section */
 		662FD59B2BB45BC7008EF823 /* MedicationResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 662FD59A2BB45BC7008EF823 /* MedicationResponse.m */; };
 		662FD5A02BB55570008EF823 /* MediItems.m in Sources */ = {isa = PBXBuildFile; fileRef = 662FD59F2BB55570008EF823 /* MediItems.m */; };
-		662FD5A82BB69583008EF823 /* AddMediTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 662FD5A62BB69582008EF823 /* AddMediTableViewCell.m */; };
-		662FD5A92BB69583008EF823 /* AddMediTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 662FD5A72BB69582008EF823 /* AddMediTableViewCell.xib */; };
+		662FD5A82BB69583008EF823 /* SearchMediTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 662FD5A62BB69582008EF823 /* SearchMediTableViewCell.m */; };
+		662FD5A92BB69583008EF823 /* SearchMediTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 662FD5A72BB69582008EF823 /* SearchMediTableViewCell.xib */; };
 		662FD5AC2BB6B1ED008EF823 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 662FD5AB2BB6B1ED008EF823 /* SDWebImage */; };
 		662FD5B02BB71D91008EF823 /* UIScrollView+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 662FD5AF2BB71D91008EF823 /* UIScrollView+Helpers.m */; };
 		66524C1F2BBA879500CA369E /* MediInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66524C1D2BBA879500CA369E /* MediInfoViewController.m */; };
 		66524C222BBA885200CA369E /* MediInfoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66524C212BBA885200CA369E /* MediInfoViewController.storyboard */; };
 		66524C272BBD3CB100CA369E /* YakTongCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 66524C252BBD3CB100CA369E /* YakTongCollectionViewCell.m */; };
 		66524C282BBD3CB100CA369E /* YakTongCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66524C262BBD3CB100CA369E /* YakTongCollectionViewCell.xib */; };
+		66524C2D2BBFC7A200CA369E /* AddMedicationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66524C2B2BBFC7A200CA369E /* AddMedicationViewController.m */; };
+		66524C302BBFC82000CA369E /* AddMedicationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66524C2F2BBFC82000CA369E /* AddMedicationViewController.storyboard */; };
+		66524C362BBFD94600CA369E /* AddSearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66524C352BBFD94600CA369E /* AddSearchTableViewController.m */; };
+		66524C382BBFD96800CA369E /* AddSearchTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66524C372BBFD96800CA369E /* AddSearchTableViewController.storyboard */; };
+		668D732B2BC3B86700848EDC /* SeletedMediItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 668D732A2BC3B86700848EDC /* SeletedMediItemView.m */; };
+		668D73342BC40A3000848EDC /* SeletedMediItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 668D73332BC40A3000848EDC /* SeletedMediItem.m */; };
+		668D733D2BC41D8200848EDC /* UIAlertController+PresentAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 668D733C2BC41D8200848EDC /* UIAlertController+PresentAlert.m */; };
 		66C7F9A92BB2F36A00C51C31 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 66C7F9A82BB2F36A00C51C31 /* GoogleService-Info.plist */; };
 		66C7F9AC2BB2F3DE00C51C31 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 66C7F9AB2BB2F3DE00C51C31 /* FirebaseDatabase */; };
 		66C7F9AE2BB2F3DE00C51C31 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 66C7F9AD2BB2F3DE00C51C31 /* FirebaseFirestore */; };
@@ -28,8 +35,8 @@
 		66D860F32BB1B14600C70006 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D860F22BB1B14600C70006 /* main.m */; };
 		66ED7AAD2BB3F1AC0086CE20 /* MedicationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66ED7AAB2BB3F1AC0086CE20 /* MedicationTableViewController.m */; };
 		66ED7AB02BB3F1EA0086CE20 /* MedicationTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66ED7AAF2BB3F1EA0086CE20 /* MedicationTableViewController.storyboard */; };
-		66ED7AB32BB3F75C0086CE20 /* AddMedicationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66ED7AB22BB3F75C0086CE20 /* AddMedicationTableViewController.m */; };
-		66ED7AB62BB3F7860086CE20 /* AddMedicationTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66ED7AB52BB3F7860086CE20 /* AddMedicationTableViewController.storyboard */; };
+		66ED7AB32BB3F75C0086CE20 /* SearchMedicationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66ED7AB22BB3F75C0086CE20 /* SearchMedicationTableViewController.m */; };
+		66ED7AB62BB3F7860086CE20 /* SearchMedicationTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66ED7AB52BB3F7860086CE20 /* SearchMedicationTableViewController.storyboard */; };
 		66ED7ABA2BB3F90A0086CE20 /* YakTongCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66ED7AB92BB3F90A0086CE20 /* YakTongCollectionViewController.m */; };
 		66ED7ABC2BB3F9150086CE20 /* YakTongCollectionViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66ED7ABB2BB3F9150086CE20 /* YakTongCollectionViewController.storyboard */; };
 /* End PBXBuildFile section */
@@ -39,9 +46,9 @@
 		662FD59A2BB45BC7008EF823 /* MedicationResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MedicationResponse.m; sourceTree = "<group>"; };
 		662FD59E2BB55570008EF823 /* MediItems.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MediItems.h; sourceTree = "<group>"; };
 		662FD59F2BB55570008EF823 /* MediItems.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MediItems.m; sourceTree = "<group>"; };
-		662FD5A52BB69582008EF823 /* AddMediTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddMediTableViewCell.h; sourceTree = "<group>"; };
-		662FD5A62BB69582008EF823 /* AddMediTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddMediTableViewCell.m; sourceTree = "<group>"; };
-		662FD5A72BB69582008EF823 /* AddMediTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddMediTableViewCell.xib; sourceTree = "<group>"; };
+		662FD5A52BB69582008EF823 /* SearchMediTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchMediTableViewCell.h; sourceTree = "<group>"; };
+		662FD5A62BB69582008EF823 /* SearchMediTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchMediTableViewCell.m; sourceTree = "<group>"; };
+		662FD5A72BB69582008EF823 /* SearchMediTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchMediTableViewCell.xib; sourceTree = "<group>"; };
 		662FD5AE2BB71D90008EF823 /* UIScrollView+Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+Helpers.h"; sourceTree = "<group>"; };
 		662FD5AF2BB71D91008EF823 /* UIScrollView+Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+Helpers.m"; sourceTree = "<group>"; };
 		66524C1C2BBA879500CA369E /* MediInfoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MediInfoViewController.h; sourceTree = "<group>"; };
@@ -50,6 +57,18 @@
 		66524C242BBD3CB100CA369E /* YakTongCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YakTongCollectionViewCell.h; sourceTree = "<group>"; };
 		66524C252BBD3CB100CA369E /* YakTongCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YakTongCollectionViewCell.m; sourceTree = "<group>"; };
 		66524C262BBD3CB100CA369E /* YakTongCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YakTongCollectionViewCell.xib; sourceTree = "<group>"; };
+		66524C2A2BBFC7A200CA369E /* AddMedicationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddMedicationViewController.h; sourceTree = "<group>"; };
+		66524C2B2BBFC7A200CA369E /* AddMedicationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddMedicationViewController.m; sourceTree = "<group>"; };
+		66524C2F2BBFC82000CA369E /* AddMedicationViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddMedicationViewController.storyboard; sourceTree = "<group>"; };
+		66524C342BBFD94600CA369E /* AddSearchTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddSearchTableViewController.h; sourceTree = "<group>"; };
+		66524C352BBFD94600CA369E /* AddSearchTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddSearchTableViewController.m; sourceTree = "<group>"; };
+		66524C372BBFD96800CA369E /* AddSearchTableViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddSearchTableViewController.storyboard; sourceTree = "<group>"; };
+		668D73292BC3B86700848EDC /* SeletedMediItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SeletedMediItemView.h; sourceTree = "<group>"; };
+		668D732A2BC3B86700848EDC /* SeletedMediItemView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SeletedMediItemView.m; sourceTree = "<group>"; };
+		668D73322BC40A3000848EDC /* SeletedMediItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SeletedMediItem.h; sourceTree = "<group>"; };
+		668D73332BC40A3000848EDC /* SeletedMediItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SeletedMediItem.m; sourceTree = "<group>"; };
+		668D733B2BC41D8200848EDC /* UIAlertController+PresentAlert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+PresentAlert.h"; sourceTree = "<group>"; };
+		668D733C2BC41D8200848EDC /* UIAlertController+PresentAlert.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+PresentAlert.m"; sourceTree = "<group>"; };
 		66C7F9A82BB2F36A00C51C31 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		66D860DD2BB1B14400C70006 /* YakTong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YakTong.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66D860E02BB1B14400C70006 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -64,9 +83,9 @@
 		66ED7AAA2BB3F1AC0086CE20 /* MedicationTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MedicationTableViewController.h; sourceTree = "<group>"; };
 		66ED7AAB2BB3F1AC0086CE20 /* MedicationTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MedicationTableViewController.m; sourceTree = "<group>"; };
 		66ED7AAF2BB3F1EA0086CE20 /* MedicationTableViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MedicationTableViewController.storyboard; sourceTree = "<group>"; };
-		66ED7AB12BB3F75C0086CE20 /* AddMedicationTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddMedicationTableViewController.h; sourceTree = "<group>"; };
-		66ED7AB22BB3F75C0086CE20 /* AddMedicationTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddMedicationTableViewController.m; sourceTree = "<group>"; };
-		66ED7AB52BB3F7860086CE20 /* AddMedicationTableViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddMedicationTableViewController.storyboard; sourceTree = "<group>"; };
+		66ED7AB12BB3F75C0086CE20 /* SearchMedicationTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchMedicationTableViewController.h; sourceTree = "<group>"; };
+		66ED7AB22BB3F75C0086CE20 /* SearchMedicationTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchMedicationTableViewController.m; sourceTree = "<group>"; };
+		66ED7AB52BB3F7860086CE20 /* SearchMedicationTableViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchMedicationTableViewController.storyboard; sourceTree = "<group>"; };
 		66ED7AB82BB3F90A0086CE20 /* YakTongCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YakTongCollectionViewController.h; sourceTree = "<group>"; };
 		66ED7AB92BB3F90A0086CE20 /* YakTongCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YakTongCollectionViewController.m; sourceTree = "<group>"; };
 		66ED7ABB2BB3F9150086CE20 /* YakTongCollectionViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = YakTongCollectionViewController.storyboard; sourceTree = "<group>"; };
@@ -90,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				662FD5982BB45B86008EF823 /* MedicationResponse */,
+				668D732F2BC409EB00848EDC /* SelectedMediItem */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -108,9 +128,9 @@
 		662FD5A42BB5CBE9008EF823 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				662FD5A52BB69582008EF823 /* AddMediTableViewCell.h */,
-				662FD5A62BB69582008EF823 /* AddMediTableViewCell.m */,
-				662FD5A72BB69582008EF823 /* AddMediTableViewCell.xib */,
+				662FD5A52BB69582008EF823 /* SearchMediTableViewCell.h */,
+				662FD5A62BB69582008EF823 /* SearchMediTableViewCell.m */,
+				662FD5A72BB69582008EF823 /* SearchMediTableViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -120,6 +140,8 @@
 			children = (
 				662FD5AE2BB71D90008EF823 /* UIScrollView+Helpers.h */,
 				662FD5AF2BB71D91008EF823 /* UIScrollView+Helpers.m */,
+				668D733B2BC41D8200848EDC /* UIAlertController+PresentAlert.h */,
+				668D733C2BC41D8200848EDC /* UIAlertController+PresentAlert.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -144,6 +166,62 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		66524C292BBFC76A00CA369E /* AddMedication */ = {
+			isa = PBXGroup;
+			children = (
+				66524C2A2BBFC7A200CA369E /* AddMedicationViewController.h */,
+				66524C2B2BBFC7A200CA369E /* AddMedicationViewController.m */,
+				66524C2F2BBFC82000CA369E /* AddMedicationViewController.storyboard */,
+			);
+			path = AddMedication;
+			sourceTree = "<group>";
+		};
+		66524C332BBFD91100CA369E /* AddSearch */ = {
+			isa = PBXGroup;
+			children = (
+				66524C342BBFD94600CA369E /* AddSearchTableViewController.h */,
+				66524C352BBFD94600CA369E /* AddSearchTableViewController.m */,
+				66524C372BBFD96800CA369E /* AddSearchTableViewController.storyboard */,
+			);
+			path = AddSearch;
+			sourceTree = "<group>";
+		};
+		66524C392BBFE01900CA369E /* TabBarViews */ = {
+			isa = PBXGroup;
+			children = (
+				66ED7AA92BB3F1010086CE20 /* Medication */,
+				66ED7AB42BB3F7620086CE20 /* SearchMedication */,
+				66ED7AB72BB3F8890086CE20 /* YakTong */,
+			);
+			path = TabBarViews;
+			sourceTree = "<group>";
+		};
+		668D73232BC3B75000848EDC /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				668D732E2BC401C600848EDC /* SeletedMediItemView */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		668D732E2BC401C600848EDC /* SeletedMediItemView */ = {
+			isa = PBXGroup;
+			children = (
+				668D73292BC3B86700848EDC /* SeletedMediItemView.h */,
+				668D732A2BC3B86700848EDC /* SeletedMediItemView.m */,
+			);
+			path = SeletedMediItemView;
+			sourceTree = "<group>";
+		};
+		668D732F2BC409EB00848EDC /* SelectedMediItem */ = {
+			isa = PBXGroup;
+			children = (
+				668D73322BC40A3000848EDC /* SeletedMediItem.h */,
+				668D73332BC40A3000848EDC /* SeletedMediItem.m */,
+			);
+			path = SelectedMediItem;
+			sourceTree = "<group>";
+		};
 		66D860D42BB1B14400C70006 = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +241,7 @@
 		66D860DF2BB1B14400C70006 /* YakTong */ = {
 			isa = PBXGroup;
 			children = (
+				668D73232BC3B75000848EDC /* CustomView */,
 				662FD5AD2BB71D84008EF823 /* Utils */,
 				662FD5972BB45B7B008EF823 /* Models */,
 				66ED7AA82BB3F0890086CE20 /* Controllers */,
@@ -183,10 +262,10 @@
 		66ED7AA82BB3F0890086CE20 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				66ED7AA92BB3F1010086CE20 /* Medication */,
-				66ED7AB42BB3F7620086CE20 /* AddMedication */,
-				66ED7AB72BB3F8890086CE20 /* YakTong */,
+				66524C392BBFE01900CA369E /* TabBarViews */,
 				66524C1B2BBA875200CA369E /* MediInfo */,
+				66524C292BBFC76A00CA369E /* AddMedication */,
+				66524C332BBFD91100CA369E /* AddSearch */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -201,15 +280,15 @@
 			path = Medication;
 			sourceTree = "<group>";
 		};
-		66ED7AB42BB3F7620086CE20 /* AddMedication */ = {
+		66ED7AB42BB3F7620086CE20 /* SearchMedication */ = {
 			isa = PBXGroup;
 			children = (
 				662FD5A42BB5CBE9008EF823 /* Cell */,
-				66ED7AB12BB3F75C0086CE20 /* AddMedicationTableViewController.h */,
-				66ED7AB22BB3F75C0086CE20 /* AddMedicationTableViewController.m */,
-				66ED7AB52BB3F7860086CE20 /* AddMedicationTableViewController.storyboard */,
+				66ED7AB12BB3F75C0086CE20 /* SearchMedicationTableViewController.h */,
+				66ED7AB22BB3F75C0086CE20 /* SearchMedicationTableViewController.m */,
+				66ED7AB52BB3F7860086CE20 /* SearchMedicationTableViewController.storyboard */,
 			);
-			path = AddMedication;
+			path = SearchMedication;
 			sourceTree = "<group>";
 		};
 		66ED7AB72BB3F8890086CE20 /* YakTong */ = {
@@ -294,11 +373,13 @@
 				66D860ED2BB1B14600C70006 /* Assets.xcassets in Resources */,
 				66D860F02BB1B14600C70006 /* Base in Resources */,
 				66C7F9A92BB2F36A00C51C31 /* GoogleService-Info.plist in Resources */,
-				662FD5A92BB69583008EF823 /* AddMediTableViewCell.xib in Resources */,
+				66524C302BBFC82000CA369E /* AddMedicationViewController.storyboard in Resources */,
+				66524C382BBFD96800CA369E /* AddSearchTableViewController.storyboard in Resources */,
+				662FD5A92BB69583008EF823 /* SearchMediTableViewCell.xib in Resources */,
 				66D860EB2BB1B14400C70006 /* Base in Resources */,
 				66ED7AB02BB3F1EA0086CE20 /* MedicationTableViewController.storyboard in Resources */,
 				66524C282BBD3CB100CA369E /* YakTongCollectionViewCell.xib in Resources */,
-				66ED7AB62BB3F7860086CE20 /* AddMedicationTableViewController.storyboard in Resources */,
+				66ED7AB62BB3F7860086CE20 /* SearchMedicationTableViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,15 +390,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				668D73342BC40A3000848EDC /* SeletedMediItem.m in Sources */,
+				668D732B2BC3B86700848EDC /* SeletedMediItemView.m in Sources */,
 				66D860E22BB1B14400C70006 /* AppDelegate.m in Sources */,
 				66ED7ABA2BB3F90A0086CE20 /* YakTongCollectionViewController.m in Sources */,
 				66ED7AAD2BB3F1AC0086CE20 /* MedicationTableViewController.m in Sources */,
 				662FD5A02BB55570008EF823 /* MediItems.m in Sources */,
-				662FD5A82BB69583008EF823 /* AddMediTableViewCell.m in Sources */,
+				662FD5A82BB69583008EF823 /* SearchMediTableViewCell.m in Sources */,
+				668D733D2BC41D8200848EDC /* UIAlertController+PresentAlert.m in Sources */,
+				66524C362BBFD94600CA369E /* AddSearchTableViewController.m in Sources */,
 				66524C1F2BBA879500CA369E /* MediInfoViewController.m in Sources */,
 				66524C272BBD3CB100CA369E /* YakTongCollectionViewCell.m in Sources */,
 				66D860F32BB1B14600C70006 /* main.m in Sources */,
-				66ED7AB32BB3F75C0086CE20 /* AddMedicationTableViewController.m in Sources */,
+				66ED7AB32BB3F75C0086CE20 /* SearchMedicationTableViewController.m in Sources */,
+				66524C2D2BBFC7A200CA369E /* AddMedicationViewController.m in Sources */,
 				66D860E52BB1B14400C70006 /* SceneDelegate.m in Sources */,
 				662FD59B2BB45BC7008EF823 /* MedicationResponse.m in Sources */,
 				662FD5B02BB71D91008EF823 /* UIScrollView+Helpers.m in Sources */,

@@ -1,5 +1,6 @@
 #import <UIKit/UIKit.h>
 #import "MediItems.h"
+#import "UIAlertController+PresentAlert.h"
 
 @import SDWebImage;
 @import FirebaseCore;

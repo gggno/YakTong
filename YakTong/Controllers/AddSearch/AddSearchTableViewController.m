@@ -1,42 +1,54 @@
-#import "AddMedicationTableViewController.h"
+#import "AddSearchTableViewController.h"
 
-@interface AddMedicationTableViewController ()
+@interface AddSearchTableViewController ()
 {
     NSString * currentSearchTerm; // 검색어
     NSNumber * pageNo;
+    NSInteger selectedIndex;
     NSMutableArray<MediItems *> * mediItemList;
 }
 
 @property (weak, nonatomic) IBOutlet UISearchBar *medicationSearchBar;
-@property (weak, nonatomic) IBOutlet UILabel *searchResultCntLabel;
-@property (weak, nonatomic) IBOutlet UITableView *searchTableView;
+@property (weak, nonatomic) IBOutlet UITableView *addSearchTableView;
+@property (weak, nonatomic) IBOutlet UILabel *searchResultLabel;
 
 @property (strong, nullable) dispatch_block_t debounceSearchInputTask;
 
+@property (strong, nonatomic) UIBarButtonItem *addBtn;
+
 @end
 
-@implementation AddMedicationTableViewController
+@implementation AddSearchTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self initialSetting];
     
+    [self initialSetting];
 }
 
 - (void)initialSetting
 {
     NSLog(@"%s, line: %d, %@",__func__, __LINE__, @"");
-
+    
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"뒤로가기" style:UIBarButtonItemStylePlain target:nil action:nil];
+    self.navigationItem.backBarButtonItem = backButton;
+    
+    _addBtn = [[UIBarButtonItem alloc] initWithTitle:@"약품 추가"
+                                                   style:UIBarButtonItemStylePlain
+                                                  target:self action:@selector(addBtnTapped:)];
+    _addBtn.enabled = NO;
+    self.navigationItem.rightBarButtonItem = _addBtn;
+    
     pageNo = [[NSNumber alloc] initWithInt:1];
     currentSearchTerm = @"";
     
-    _searchTableView.delegate = self;
-    _searchTableView.dataSource = self;
-    _searchTableView.rowHeight = 100;
+    _addSearchTableView.delegate = self;
+    _addSearchTableView.dataSource = self;
+    _addSearchTableView.rowHeight = 100;
     
-    UINib * addMediCellNib = [UINib nibWithNibName:@"AddMediTableViewCell" bundle:nil];
-    [_searchTableView registerNib:addMediCellNib forCellReuseIdentifier:@"AddMediTableViewCell"];
+    UINib * searchMediCellNib = [UINib nibWithNibName:@"SearchMediTableViewCell" bundle:nil];
+    [_addSearchTableView registerNib:searchMediCellNib forCellReuseIdentifier:@"SearchMediTableViewCell"];
     
 }
 
@@ -115,8 +127,8 @@
         self->mediItemList = nil;
         
         dispatch_async(dispatch_get_main_queue(), ^{
-            [self->_searchResultCntLabel setText:@""];
-            [self->_searchTableView reloadData];
+            [self->_searchResultLabel setText:@""];
+            [self->_addSearchTableView reloadData];
         });
         
         return;
@@ -136,8 +148,8 @@
             NSString *stringCnt = [[NSString stringWithFormat:@"%d", response.totalCount] stringByAppendingString:@"개"];
             
             dispatch_async(dispatch_get_main_queue(), ^{
-                [self->_searchResultCntLabel setText:stringCnt];
-                [self->_searchTableView reloadData];
+                [self->_searchResultLabel setText:stringCnt];
+                [self->_addSearchTableView reloadData];
             });
         }];
     });
@@ -156,9 +168,7 @@
 {
     MediItems * cellData = [mediItemList objectAtIndex:indexPath.row];
     
-    AddMediTableViewCell * cell = (AddMediTableViewCell *) [tableView dequeueReusableCellWithIdentifier:@"AddMediTableViewCell" forIndexPath:indexPath];
-    
-    [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+    SearchMediTableViewCell * cell = (SearchMediTableViewCell *) [tableView dequeueReusableCellWithIdentifier:@"SearchMediTableViewCell" forIndexPath:indexPath];
     
     [cell configureCell:cellData];
     
@@ -168,19 +178,13 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSLog(@"%s, line: %d, indexPath.row: %ld",__func__, __LINE__, (long)indexPath.row);
-    NSLog(@"mediItemList[indexPath.row]: %@", mediItemList[indexPath.row].itemName);
     
-    UIStoryboard * storyboard = [UIStoryboard storyboardWithName:@"MediInfoViewController" bundle:nil];
+    selectedIndex = indexPath.row;
+    _addBtn.enabled = YES;
     
-    MediInfoViewController * mediInfoVC = [storyboard instantiateViewControllerWithIdentifier:@"MediInfoViewController"];
-    
-    mediInfoVC.mediItem = mediItemList[indexPath.row];
-    
-    [[self navigationController] pushViewController:mediInfoVC animated:YES];
 }
 
 #pragma mark UIScrollViewDelegate
-
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     if ([scrollView reachedBottom:200]) {
@@ -192,11 +196,24 @@
             [self->mediItemList addObjectsFromArray:response.items];
             
             dispatch_async(dispatch_get_main_queue(), ^{
-                [self->_searchTableView reloadData];
+                [self->_addSearchTableView reloadData];
             });
         }];
     }
 }
 
+#pragma mark IBAction
+- (void)addBtnTapped:(UIButton *)sender
+{
+    NSLog(@"%s, line: %d, %@",__func__, __LINE__, @"");
+    
+    NSLog(@"%@", mediItemList[selectedIndex].itemName);
+    NSDictionary *mediItemDic = @{@"itemName":mediItemList[selectedIndex].itemName,
+                                  @"itemImage":mediItemList[selectedIndex].itemImage
+    };
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"selectedMediItem" object:self userInfo:mediItemDic];
+//    [[self navigationController] popViewControllerAnimated:YES];
+}
 
 @end

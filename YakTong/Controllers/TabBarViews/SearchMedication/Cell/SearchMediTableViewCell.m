@@ -1,6 +1,6 @@
-#import "AddMediTableViewCell.h"
+#import "SearchMediTableViewCell.h"
 
-@implementation AddMediTableViewCell
+@implementation SearchMediTableViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -13,7 +13,6 @@
 
 -(void)configureCell:(MediItems *)cellData
 {   
-    
     if (![cellData.itemImage isKindOfClass:[NSNull class]]) {
         [_mediImageView sd_setImageWithURL:[NSURL URLWithString:cellData.itemImage]
                           placeholderImage:[UIImage systemImageNamed:@"pills.fill"]];
@@ -30,7 +29,7 @@
         [_efcyQesitmLabel setText:cellData.efcyQesitm];
     } else {
         [_efcyQesitmLabel setText:@"정보없음"];
-    }    
+    }
 }
 
 @end

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Add Medication View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="AddMedicationViewController" id="Y6W-OH-hqX" customClass="AddMedicationViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tdr-Ib-iBE">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hZM-hC-Sa3">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="486"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oCd-sc-23c">
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="426"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="OKd-eI-LgU">
+                                                        <rect key="frame" x="8" y="83" width="377" height="77.666666666666686"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="시작일(언제 복약을 시작하나요?)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="puu-E3-SWx">
+                                                                <rect key="frame" x="0.0" y="0.0" width="235" height="21.666666666666668"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="YsL-QJ-VcB">
+                                                                <rect key="frame" x="0.0" y="27.666666666666657" width="115" height="50"/>
+                                                                <locale key="locale" localeIdentifier="ko_KR"/>
+                                                            </datePicker>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="sCE-gm-ycG">
+                                                        <rect key="frame" x="8" y="192.66666666666666" width="377" height="77.666666666666657"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="종료일(언제 복약을 종료하나요?)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="muo-av-gea">
+                                                                <rect key="frame" x="0.0" y="0.0" width="235" height="21.666666666666668"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="IeO-N2-y3P">
+                                                                <rect key="frame" x="0.0" y="27.666666666666657" width="115" height="50"/>
+                                                                <locale key="locale" localeIdentifier="ko_KR"/>
+                                                            </datePicker>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="어떤 질병으로 약을 복용하시나요?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OWN-js-PoK">
+                                                        <rect key="frame" x="8" y="0.0" width="377" height="35"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="35" id="gZh-V5-zp5"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="약(복용하실 약을 입력해 주세요.)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJs-64-9Oe">
+                                                        <rect key="frame" x="8" y="318.33333333333331" width="377" height="21.666666666666686"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="now-1G-L52">
+                                                        <rect key="frame" x="40" y="356" width="313" height="50"/>
+                                                        <color key="backgroundColor" name="MainColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="3ha-fz-zkL"/>
+                                                        </constraints>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="약 검색"/>
+                                                        <connections>
+                                                            <action selector="mediSearchBtnTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="3OM-bB-oot"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="EJs-64-9Oe" firstAttribute="top" secondItem="sCE-gm-ycG" secondAttribute="bottom" constant="48" id="1r3-23-sLC"/>
+                                                    <constraint firstItem="OWN-js-PoK" firstAttribute="top" secondItem="oCd-sc-23c" secondAttribute="top" id="1s1-iP-JxS"/>
+                                                    <constraint firstAttribute="trailing" secondItem="OWN-js-PoK" secondAttribute="trailing" constant="8" id="C5N-bv-zDu"/>
+                                                    <constraint firstItem="now-1G-L52" firstAttribute="leading" secondItem="oCd-sc-23c" secondAttribute="leading" constant="40" id="HVe-4l-KEa"/>
+                                                    <constraint firstAttribute="height" constant="426" id="JZw-Rd-ykq"/>
+                                                    <constraint firstItem="OKd-eI-LgU" firstAttribute="leading" secondItem="oCd-sc-23c" secondAttribute="leading" constant="8" id="Syp-XU-4Xi"/>
+                                                    <constraint firstAttribute="width" constant="393" id="VB1-x1-lCf"/>
+                                                    <constraint firstAttribute="trailing" secondItem="sCE-gm-ycG" secondAttribute="trailing" constant="8" id="Vdo-r2-BCP"/>
+                                                    <constraint firstItem="OWN-js-PoK" firstAttribute="leading" secondItem="oCd-sc-23c" secondAttribute="leading" constant="8" id="Wws-IK-2nN"/>
+                                                    <constraint firstItem="now-1G-L52" firstAttribute="top" secondItem="EJs-64-9Oe" secondAttribute="bottom" constant="16" id="aB0-FA-rCD"/>
+                                                    <constraint firstAttribute="trailing" secondItem="now-1G-L52" secondAttribute="trailing" constant="40" id="fuT-Q7-nkc"/>
+                                                    <constraint firstItem="OKd-eI-LgU" firstAttribute="top" secondItem="OWN-js-PoK" secondAttribute="bottom" constant="48" id="hsq-fc-E16"/>
+                                                    <constraint firstAttribute="trailing" secondItem="OKd-eI-LgU" secondAttribute="trailing" constant="8" id="ijh-bj-515"/>
+                                                    <constraint firstItem="EJs-64-9Oe" firstAttribute="leading" secondItem="oCd-sc-23c" secondAttribute="leading" constant="8" id="nSg-UG-a9Z"/>
+                                                    <constraint firstAttribute="trailing" secondItem="EJs-64-9Oe" secondAttribute="trailing" constant="8" id="qdv-44-Oxz"/>
+                                                    <constraint firstItem="sCE-gm-ycG" firstAttribute="leading" secondItem="oCd-sc-23c" secondAttribute="leading" constant="8" id="rUM-lB-hRN"/>
+                                                    <constraint firstItem="sCE-gm-ycG" firstAttribute="top" secondItem="OKd-eI-LgU" secondAttribute="bottom" constant="32" id="zG3-nH-kZZ"/>
+                                                </constraints>
+                                            </view>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="wKB-cq-y9w">
+                                                <rect key="frame" x="0.0" y="426" width="393" height="60"/>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="hZM-hC-Sa3" firstAttribute="trailing" secondItem="njc-sg-7UJ" secondAttribute="trailing" id="9hd-QT-2tv"/>
+                                    <constraint firstItem="hZM-hC-Sa3" firstAttribute="leading" secondItem="njc-sg-7UJ" secondAttribute="leading" id="LhH-6A-MBU"/>
+                                    <constraint firstItem="hZM-hC-Sa3" firstAttribute="width" secondItem="BRt-2j-dq8" secondAttribute="width" id="Pek-QQ-BOt"/>
+                                    <constraint firstItem="hZM-hC-Sa3" firstAttribute="bottom" secondItem="njc-sg-7UJ" secondAttribute="bottom" id="S83-qN-bPA"/>
+                                    <constraint firstItem="hZM-hC-Sa3" firstAttribute="top" secondItem="njc-sg-7UJ" secondAttribute="top" id="Ys8-sL-ajU"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="njc-sg-7UJ"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="BRt-2j-dq8"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Tdr-Ib-iBE" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="6gu-WC-PNG"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Tdr-Ib-iBE" secondAttribute="bottom" id="7fN-uA-QKU"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Tdr-Ib-iBE" secondAttribute="trailing" id="GY9-7p-Uuq"/>
+                            <constraint firstItem="Tdr-Ib-iBE" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="Okz-ep-A1a"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="diseaseTextField" destination="OWN-js-PoK" id="5D2-ms-jU6"/>
+                        <outlet property="endDatePicker" destination="IeO-N2-y3P" id="Egw-5J-OI0"/>
+                        <outlet property="mediSearchBtn" destination="now-1G-L52" id="bjj-Vx-DDC"/>
+                        <outlet property="selectedMediItemStackView" destination="wKB-cq-y9w" id="l2e-Sz-T1B"/>
+                        <outlet property="startDatePicker" destination="YsL-QJ-VcB" id="qjm-Tu-vv3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="64.885496183206101" y="-34.507042253521128"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="MainColor">
+            <color red="0.21699999272823334" green="0.70999997854232788" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

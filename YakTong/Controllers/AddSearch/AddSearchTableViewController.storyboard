@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Add Search Table View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="AddSearchTableViewController" id="Y6W-OH-hqX" customClass="AddSearchTableViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="제품 명을 입력해주세요." translatesAutoresizingMaskIntoConstraints="NO" id="UYO-2c-ve0">
+                                <rect key="frame" x="0.0" y="59" width="393" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="yRY-zK-lL3"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Jit-mB-GYO">
+                                <rect key="frame" x="0.0" y="145" width="393" height="673"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="검색 결과" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P10-Ej-yri">
+                                <rect key="frame" x="8.0000000000000036" y="125" width="63.333333333333343" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v9r-VY-bqu">
+                                <rect key="frame" x="75.333333333333329" y="123" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UYO-2c-ve0" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="3CL-t2-E6b"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Jit-mB-GYO" secondAttribute="trailing" id="4br-tT-bxn"/>
+                            <constraint firstItem="v9r-VY-bqu" firstAttribute="leading" secondItem="P10-Ej-yri" secondAttribute="trailing" constant="4" id="85q-Hk-dzW"/>
+                            <constraint firstItem="Jit-mB-GYO" firstAttribute="top" secondItem="P10-Ej-yri" secondAttribute="bottom" id="KSf-w2-gVp"/>
+                            <constraint firstItem="P10-Ej-yri" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="8" id="LyS-hr-SlD"/>
+                            <constraint firstItem="P10-Ej-yri" firstAttribute="top" secondItem="UYO-2c-ve0" secondAttribute="bottom" constant="10" id="VHO-d8-Hkg"/>
+                            <constraint firstItem="Jit-mB-GYO" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="X1w-DR-SZ4"/>
+                            <constraint firstItem="v9r-VY-bqu" firstAttribute="top" secondItem="UYO-2c-ve0" secondAttribute="bottom" constant="8" id="mfX-Ek-R5v"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Jit-mB-GYO" secondAttribute="bottom" id="w3d-S8-P66"/>
+                            <constraint firstItem="UYO-2c-ve0" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="xJ3-M4-7h6"/>
+                            <constraint firstItem="UYO-2c-ve0" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="zRW-w2-H2L"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addSearchTableView" destination="Jit-mB-GYO" id="nJq-oB-YhF"/>
+                        <outlet property="medicationSearchBar" destination="UYO-2c-ve0" id="rSE-wf-Unu"/>
+                        <outlet property="searchResultLabel" destination="v9r-VY-bqu" id="O0I-xk-l1P"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="93.89312977099236" y="-28.169014084507044"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

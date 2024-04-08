@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--추가-->
+        <!--검색-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="AddMedicationTableViewController" id="Y6W-OH-hqX" customClass="AddMedicationTableViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchMedicationTableViewController" id="Y6W-OH-hqX" customClass="SearchMedicationTableViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -24,7 +24,7 @@
                                 </connections>
                             </searchBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="검색 결과" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3bO-1T-l5G">
-                                <rect key="frame" x="8.0000000000000036" y="124.99999999999999" width="63.333333333333343" height="20.333333333333329"/>
+                                <rect key="frame" x="8" y="125" width="63.333333333333371" height="20.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -56,7 +56,7 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="oV9-96-Yaj" secondAttribute="trailing" id="pwt-GA-2pB"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="추가" image="plus.circle.fill" catalog="system" id="ySP-QP-QAf"/>
+                    <tabBarItem key="tabBarItem" title="검색" image="plus.circle.fill" catalog="system" id="ySP-QP-QAf"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="medicationSearchBar" destination="oV9-96-Yaj" id="sax-UC-m8a"/>

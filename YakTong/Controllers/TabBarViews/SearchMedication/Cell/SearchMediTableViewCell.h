@@ -1,10 +1,3 @@
-//
-//  AddMediTableViewCell.h
-//  YakTong
-//
-//  Created by 정근호 on 3/29/24.
-//
-
 #import <UIKit/UIKit.h>
 #import "MediItems.h"
 
@@ -12,7 +5,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface AddMediTableViewCell : UITableViewCell
+@interface SearchMediTableViewCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *mediImageView;
 @property (weak, nonatomic) IBOutlet UILabel *itemNameLabel;

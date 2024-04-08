@@ -4,7 +4,6 @@
 
 - (id)initWithDictionary:(NSDictionary<NSString *,id> *)jsonDictionary
 {
-    
     self = [super init];
     
     if (self) {
