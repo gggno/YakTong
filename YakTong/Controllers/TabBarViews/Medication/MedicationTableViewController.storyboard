@@ -15,11 +15,26 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="XRL-rS-mMh">
+                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="XRL-rS-mMh" secondAttribute="trailing" id="dp1-EH-n81"/>
+                            <constraint firstItem="XRL-rS-mMh" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="hGy-hX-OuM"/>
+                            <constraint firstItem="XRL-rS-mMh" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="hXi-qB-Xwt"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="XRL-rS-mMh" secondAttribute="bottom" id="lbL-SB-Nja"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="복약리스트" image="list.bullet.rectangle" catalog="system" id="YB7-HJ-gtY"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="medicationTableView" destination="XRL-rS-mMh" id="OYE-P6-OYd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

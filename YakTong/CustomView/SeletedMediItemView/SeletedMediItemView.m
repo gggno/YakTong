@@ -2,15 +2,18 @@
 
 @implementation SeletedMediItemView
 
-- (id)initWithItem:(NSString *)itemName :(NSString *)itemImage
+- (id)initWithItem:(NSString *)itemName :(NSString *)itemImage :(NSInteger)imageWitdh :(NSInteger)imageHeight
 {
-    NSLog(@"%s, line: %d, itemName: %@ itemImage: %@",__func__, __LINE__, itemName, itemImage);
+    NSLog(@"%s, line: %d",__func__, __LINE__);
 
     self = [super init];
     
     if (self) {
         _itemName = itemName;
         _itemImage = itemImage;
+        _imageWitdh = imageWitdh;
+        _imageHeight = imageHeight;
+        
         [self setupUI];
     }
     
@@ -18,11 +21,6 @@
 }
 
 - (void)setupUI {
-    NSLog(@"%s, line: %d, %@",__func__, __LINE__, @"");
-    NSLog(@"_itemName: %@", _itemName);
-    NSLog(@"_itemImage: %@", _itemImage);
-    
-    
     // UIImageView 생성 및 설정
     self.imageView = [[UIImageView alloc] init];
     self.imageView.contentMode = UIViewContentModeScaleToFill;
@@ -58,8 +56,8 @@
     [self addSubview:stackView];
     
     self.imageView.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.imageView.widthAnchor constraintEqualToConstant:80].active = YES;
-    [self.imageView.heightAnchor constraintEqualToConstant:60].active = YES;
+    [self.imageView.widthAnchor constraintEqualToConstant:_imageWitdh].active = YES;
+    [self.imageView.heightAnchor constraintEqualToConstant:_imageHeight].active = YES;
     
     stackView.translatesAutoresizingMaskIntoConstraints = NO;
     [stackView.leadingAnchor constraintEqualToAnchor:self.leadingAnchor constant:20].active = YES;

@@ -6,10 +6,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SeletedMediItem.h"
+#import "MediListDelegate.h"
+#import "AddMedicationViewController.h"
+#import "MedicationListItem.h"
+#import "MedicationTableViewCell.h"
+
+@import FirebaseCore;
+@import FirebaseFirestore;
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MedicationTableViewController : UIViewController
+@interface MedicationTableViewController : UIViewController <MediListDelegate, UITableViewDelegate, UITableViewDataSource>
 
 - (void)initialSetting;
 

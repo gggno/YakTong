@@ -12,7 +12,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSString *itemName;
 @property (nonatomic, strong) NSString *itemImage;
 
-- (id)initWithItem:(NSString *)itemName :(NSString *)itemImage;
+@property (nonatomic, assign) NSInteger imageWitdh;
+@property (nonatomic, assign) NSInteger imageHeight;
+
+- (id)initWithItem:(NSString *)itemName :(NSString *)itemImage :(NSInteger)imageWitdh :(NSInteger)imageHeight;
 
 @end
 

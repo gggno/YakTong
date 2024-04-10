@@ -15,6 +15,8 @@
 
 @property (weak, nonatomic) IBOutlet UIStackView *selectedMediItemStackView;
 
+@property (weak, nonatomic, nullable) FIRFirestore *db;
+
 @end
 
 @implementation AddMedicationViewController
@@ -37,6 +39,8 @@
 {
     NSLog(@"%s, line: %d, %@",__func__, __LINE__, @"");
     
+    _db = [FIRFirestore firestore];
+    
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"뒤로가기" style:UIBarButtonItemStylePlain target:nil action:nil];
     self.navigationItem.backBarButtonItem = backButton;
     
@@ -53,6 +57,7 @@
     self.navigationItem.rightBarButtonItem = _addBtn;
     
     selectedMediItemList = [NSMutableArray new];
+    
 }
 
 #pragma mark IBActions
@@ -66,18 +71,50 @@
 {
     NSLog(@"%s, line: %d, %@",__func__, __LINE__, @"");
     
-    NSLog(@"질병명: %@", _diseaseTextField.text);
-    NSLog(@"시작일: %@", _startDatePicker.date);
-    NSLog(@"종료일: %@", _endDatePicker.date);
-    NSLog(@"선택된 아이템: %@", selectedMediItemList);
-    
     if ([_diseaseTextField.text length] == 0 || selectedMediItemList.count == 0) {
         [UIAlertController showCustomAlertWithTitle:@"추가할 수 없음" message:@"추가하지 않은 항목이 있습니다.\n다시 한번 확인해주세요." inViewController:self];
         
     } else {
-        // MedicationTableViewController로 selectedMediItemList에 저장된 데이터 전달
+        NSString *uuid = [[NSUUID new] UUIDString];
+        FIRDocumentReference *mediItemListRef = [[self.db collectionWithPath:@"mediItemList"] documentWithPath:uuid];
         
-        [self dismissViewControllerAnimated:YES completion:nil];
+        NSMutableArray<NSString *> * selectedItemNameArr = [NSMutableArray new];
+        NSMutableArray<NSString *> * selectedItemImageArr = [NSMutableArray new];
+        
+        for (SeletedMediItem * mediItem in selectedMediItemList) {
+            [selectedItemNameArr addObject:mediItem.itemName];
+            [selectedItemImageArr addObject:mediItem.itemImage];
+        }
+        
+        NSDictionary *meidListData = @{
+            @"identifier": uuid,
+            @"disease": _diseaseTextField.text,
+            @"startDate": _startDatePicker.date,
+            @"endDate": _endDatePicker.date,
+            @"selectedItemName": selectedItemNameArr,
+            @"selectedItemImage": selectedItemImageArr
+        };
+        
+        [mediItemListRef setData:meidListData completion:^(NSError * _Nullable error) {
+            if (error) {
+                NSLog(@"복약리스트에 추가하는 과정에서 에러가 발생하였습니다. 에러내용: %@", error);
+                
+            } else {
+                NSLog(@"복약리스트에 추가되었습니다.");
+                __weak AddMedicationViewController * weakSelf = self;
+                
+                AddMedicationViewController * strongSelf = weakSelf;
+                
+                if (strongSelf) {
+                    [strongSelf->_delegate addMediList:strongSelf->_diseaseTextField.text
+                                          :strongSelf->_startDatePicker.date
+                                          :strongSelf->_endDatePicker.date
+                                          :strongSelf->selectedMediItemList];
+                    
+                    [self dismissViewControllerAnimated:YES completion:nil];
+                }
+            }
+        }];
     }
     
 }
@@ -102,7 +139,7 @@
         NSString * itemName = userInfo[@"itemName"];
         NSString * itemImage = userInfo[@"itemImage"];
         
-        SeletedMediItemView *itemView = [[SeletedMediItemView alloc] initWithItem:itemName :itemImage];
+        SeletedMediItemView *itemView = [[SeletedMediItemView alloc] initWithItem:itemName :itemImage :80 :60];
         
         SeletedMediItem *tempSelectedMediItem = [[SeletedMediItem alloc] initWithString:itemName :itemImage];
         

@@ -1,10 +1,3 @@
-//
-//  UIAlertController+PresentAlert.m
-//  YakTong
-//
-//  Created by 정근호 on 4/8/24.
-//
-
 #import "UIAlertController+PresentAlert.h"
 
 @implementation UIAlertController (PresentAlert)

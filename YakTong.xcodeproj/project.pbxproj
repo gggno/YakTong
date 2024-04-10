@@ -24,6 +24,10 @@
 		668D732B2BC3B86700848EDC /* SeletedMediItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 668D732A2BC3B86700848EDC /* SeletedMediItemView.m */; };
 		668D73342BC40A3000848EDC /* SeletedMediItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 668D73332BC40A3000848EDC /* SeletedMediItem.m */; };
 		668D733D2BC41D8200848EDC /* UIAlertController+PresentAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 668D733C2BC41D8200848EDC /* UIAlertController+PresentAlert.m */; };
+		668D73422BC424EB00848EDC /* MedicationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 668D73402BC424EB00848EDC /* MedicationTableViewCell.m */; };
+		668D73432BC424EB00848EDC /* MedicationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 668D73412BC424EB00848EDC /* MedicationTableViewCell.xib */; };
+		668D734F2BC5184400848EDC /* MedicationListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 668D734E2BC5184400848EDC /* MedicationListItem.m */; };
+		668D73522BC526DC00848EDC /* NSDate+convertDateToString.m in Sources */ = {isa = PBXBuildFile; fileRef = 668D73512BC526DC00848EDC /* NSDate+convertDateToString.m */; };
 		66C7F9A92BB2F36A00C51C31 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 66C7F9A82BB2F36A00C51C31 /* GoogleService-Info.plist */; };
 		66C7F9AC2BB2F3DE00C51C31 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 66C7F9AB2BB2F3DE00C51C31 /* FirebaseDatabase */; };
 		66C7F9AE2BB2F3DE00C51C31 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 66C7F9AD2BB2F3DE00C51C31 /* FirebaseFirestore */; };
@@ -69,6 +73,14 @@
 		668D73332BC40A3000848EDC /* SeletedMediItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SeletedMediItem.m; sourceTree = "<group>"; };
 		668D733B2BC41D8200848EDC /* UIAlertController+PresentAlert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+PresentAlert.h"; sourceTree = "<group>"; };
 		668D733C2BC41D8200848EDC /* UIAlertController+PresentAlert.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+PresentAlert.m"; sourceTree = "<group>"; };
+		668D733F2BC424EB00848EDC /* MedicationTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MedicationTableViewCell.h; sourceTree = "<group>"; };
+		668D73402BC424EB00848EDC /* MedicationTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MedicationTableViewCell.m; sourceTree = "<group>"; };
+		668D73412BC424EB00848EDC /* MedicationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MedicationTableViewCell.xib; sourceTree = "<group>"; };
+		668D734B2BC50C4600848EDC /* MediListDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MediListDelegate.h; sourceTree = "<group>"; };
+		668D734D2BC5184400848EDC /* MedicationListItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MedicationListItem.h; sourceTree = "<group>"; };
+		668D734E2BC5184400848EDC /* MedicationListItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MedicationListItem.m; sourceTree = "<group>"; };
+		668D73502BC526DC00848EDC /* NSDate+convertDateToString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+convertDateToString.h"; sourceTree = "<group>"; };
+		668D73512BC526DC00848EDC /* NSDate+convertDateToString.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+convertDateToString.m"; sourceTree = "<group>"; };
 		66C7F9A82BB2F36A00C51C31 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		66D860DD2BB1B14400C70006 /* YakTong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YakTong.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66D860E02BB1B14400C70006 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -109,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				662FD5982BB45B86008EF823 /* MedicationResponse */,
+				668D734C2BC517BF00848EDC /* MedicationListItem */,
 				668D732F2BC409EB00848EDC /* SelectedMediItem */,
 			);
 			path = Models;
@@ -142,6 +155,8 @@
 				662FD5AF2BB71D91008EF823 /* UIScrollView+Helpers.m */,
 				668D733B2BC41D8200848EDC /* UIAlertController+PresentAlert.h */,
 				668D733C2BC41D8200848EDC /* UIAlertController+PresentAlert.m */,
+				668D73502BC526DC00848EDC /* NSDate+convertDateToString.h */,
+				668D73512BC526DC00848EDC /* NSDate+convertDateToString.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -222,6 +237,33 @@
 			path = SelectedMediItem;
 			sourceTree = "<group>";
 		};
+		668D733E2BC424CE00848EDC /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				668D733F2BC424EB00848EDC /* MedicationTableViewCell.h */,
+				668D73402BC424EB00848EDC /* MedicationTableViewCell.m */,
+				668D73412BC424EB00848EDC /* MedicationTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		668D73442BC508AE00848EDC /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				668D734B2BC50C4600848EDC /* MediListDelegate.h */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		668D734C2BC517BF00848EDC /* MedicationListItem */ = {
+			isa = PBXGroup;
+			children = (
+				668D734D2BC5184400848EDC /* MedicationListItem.h */,
+				668D734E2BC5184400848EDC /* MedicationListItem.m */,
+			);
+			path = MedicationListItem;
+			sourceTree = "<group>";
+		};
 		66D860D42BB1B14400C70006 = {
 			isa = PBXGroup;
 			children = (
@@ -241,6 +283,7 @@
 		66D860DF2BB1B14400C70006 /* YakTong */ = {
 			isa = PBXGroup;
 			children = (
+				668D73442BC508AE00848EDC /* Delegate */,
 				668D73232BC3B75000848EDC /* CustomView */,
 				662FD5AD2BB71D84008EF823 /* Utils */,
 				662FD5972BB45B7B008EF823 /* Models */,
@@ -273,6 +316,7 @@
 		66ED7AA92BB3F1010086CE20 /* Medication */ = {
 			isa = PBXGroup;
 			children = (
+				668D733E2BC424CE00848EDC /* Cell */,
 				66ED7AAA2BB3F1AC0086CE20 /* MedicationTableViewController.h */,
 				66ED7AAB2BB3F1AC0086CE20 /* MedicationTableViewController.m */,
 				66ED7AAF2BB3F1EA0086CE20 /* MedicationTableViewController.storyboard */,
@@ -371,6 +415,7 @@
 				66ED7ABC2BB3F9150086CE20 /* YakTongCollectionViewController.storyboard in Resources */,
 				66524C222BBA885200CA369E /* MediInfoViewController.storyboard in Resources */,
 				66D860ED2BB1B14600C70006 /* Assets.xcassets in Resources */,
+				668D73432BC424EB00848EDC /* MedicationTableViewCell.xib in Resources */,
 				66D860F02BB1B14600C70006 /* Base in Resources */,
 				66C7F9A92BB2F36A00C51C31 /* GoogleService-Info.plist in Resources */,
 				66524C302BBFC82000CA369E /* AddMedicationViewController.storyboard in Resources */,
@@ -390,6 +435,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				668D734F2BC5184400848EDC /* MedicationListItem.m in Sources */,
 				668D73342BC40A3000848EDC /* SeletedMediItem.m in Sources */,
 				668D732B2BC3B86700848EDC /* SeletedMediItemView.m in Sources */,
 				66D860E22BB1B14400C70006 /* AppDelegate.m in Sources */,
@@ -398,6 +444,8 @@
 				662FD5A02BB55570008EF823 /* MediItems.m in Sources */,
 				662FD5A82BB69583008EF823 /* SearchMediTableViewCell.m in Sources */,
 				668D733D2BC41D8200848EDC /* UIAlertController+PresentAlert.m in Sources */,
+				668D73422BC424EB00848EDC /* MedicationTableViewCell.m in Sources */,
+				668D73522BC526DC00848EDC /* NSDate+convertDateToString.m in Sources */,
 				66524C362BBFD94600CA369E /* AddSearchTableViewController.m in Sources */,
 				66524C1F2BBA879500CA369E /* MediInfoViewController.m in Sources */,
 				66524C272BBD3CB100CA369E /* YakTongCollectionViewCell.m in Sources */,
