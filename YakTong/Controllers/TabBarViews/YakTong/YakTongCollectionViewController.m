@@ -81,8 +81,6 @@
     [self getYakTongs];
 }
 
-
-
 #pragma mark UICollectionView FlowLayout Delegate
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -91,6 +89,7 @@
     
     return CGSizeMake(width, height);
 }
+
 #pragma mark UICollectionViewDelegate
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
 {
@@ -106,7 +105,6 @@
     mediInfoVC.mediItem = yakTongList[indexPath.item];
     
     [[self navigationController] pushViewController:mediInfoVC animated:YES];
-
 }
 
 #pragma mark UICollectionViewDataSource

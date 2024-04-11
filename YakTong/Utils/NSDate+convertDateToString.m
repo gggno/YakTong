@@ -1,10 +1,3 @@
-//
-//  NSDate+convertDateToString.m
-//  YakTong
-//
-//  Created by 정근호 on 4/9/24.
-//
-
 #import "NSDate+convertDateToString.h"
 
 @implementation NSDate (convertDateToString)

@@ -1,10 +1,3 @@
-//
-//  SceneDelegate.m
-//  YakTong
-//
-//  Created by 정근호 on 3/25/24.
-//
-
 #import "SceneDelegate.h"
 
 @interface SceneDelegate ()

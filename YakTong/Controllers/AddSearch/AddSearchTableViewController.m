@@ -23,7 +23,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
     [self initialSetting];
 }
 
@@ -49,7 +48,6 @@
     
     UINib * searchMediCellNib = [UINib nibWithNibName:@"SearchMediTableViewCell" bundle:nil];
     [_addSearchTableView registerNib:searchMediCellNib forCellReuseIdentifier:@"SearchMediTableViewCell"];
-    
 }
 
 #pragma mark Instance Methods
@@ -181,7 +179,6 @@
     
     selectedIndex = indexPath.row;
     _addBtn.enabled = YES;
-    
 }
 
 #pragma mark UIScrollViewDelegate
@@ -213,7 +210,6 @@
     };
     
     [[NSNotificationCenter defaultCenter] postNotificationName:@"selectedMediItem" object:self userInfo:mediItemDic];
-//    [[self navigationController] popViewControllerAnimated:YES];
 }
 
 @end

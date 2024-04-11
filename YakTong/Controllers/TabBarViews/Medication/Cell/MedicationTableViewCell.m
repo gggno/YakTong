@@ -5,7 +5,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     
-    self.contentView.layer.cornerRadius = 10;
+    self.contentView.layer.cornerRadius = 5;
     self.contentView.layer.borderWidth = 1;
     self.contentView.layer.borderColor = UIColor.tintColor.CGColor;
 }

@@ -14,7 +14,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *seQesitmLabel;
 @property (weak, nonatomic) IBOutlet UILabel *depositMethodQesitm;
 
-@property (strong, nonatomic) UIBarButtonItem *mediListBtn;
 @property (strong, nonatomic) UIBarButtonItem *yakTongBtn;
 
 @property (weak, nonatomic, nullable) FIRFirestore *db;
@@ -68,13 +67,6 @@
             
             if (strongSelf) {
                 // 내비게이션 아이템 설정
-                strongSelf->_mediListBtn = [[UIBarButtonItem alloc]
-                                                initWithImage:[UIImage systemImageNamed:@"plus"]
-                                                style:UIBarButtonItemStylePlain
-                                                target:self
-                                                action:@selector(mediListBtnTapped:)];
-                [strongSelf->_mediListBtn setTintColor:UIColor.blueColor];
-                
                 strongSelf->_yakTongBtn = [[UIBarButtonItem alloc]
                                                initWithImage:[UIImage systemImageNamed:@"pill.fill"]
                                                style:UIBarButtonItemStylePlain
@@ -85,7 +77,7 @@
                 if ([snapshot.documents count] > 0) {
                     NSLog(@"이미 해당 의약품이 약통에 존재합니다.");
                     strongSelf->_yakTongState = NO;
-                    [strongSelf->_yakTongBtn setTintColor:UIColor.greenColor];
+                    [strongSelf->_yakTongBtn setTintColor:UIColor.systemBlueColor];
                     
                 } else {
                     NSLog(@"해당 의약품이 약통에 존재하지 않습니다. 추가할 수 있습니다.");
@@ -93,9 +85,7 @@
                     [strongSelf->_yakTongBtn setTintColor:UIColor.grayColor];
                 }
                 
-                // 복약리스트 if 문도 넣어야됨
-                
-                self.navigationItem.rightBarButtonItems = @[strongSelf->_yakTongBtn, strongSelf->_mediListBtn];
+                self.navigationItem.rightBarButtonItem = strongSelf->_yakTongBtn;
             }
         }
     }];
@@ -126,13 +116,6 @@
     } else {
         [label setText:@"정보없음"];
     }
-}
-
-- (void)mediListBtnTapped:(UIButton *)sender
-{
-    NSLog(@"%s, line: %d, %@",__func__, __LINE__, @"");
-    
-    
 }
 
 - (void)yakTongBtnTapped:(UIButton *)sender

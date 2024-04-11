@@ -41,7 +41,7 @@
                                     style:UIBarButtonItemStylePlain
                                     target:self
                                     action:@selector(mediListBtnTapped:)];
-    [_mediListBtn setTintColor:UIColor.blueColor];
+    [_mediListBtn setTintColor:UIColor.systemBlueColor];
     
     self.navigationItem.rightBarButtonItem = _mediListBtn;
     
@@ -58,7 +58,6 @@
     
     AddMedicationViewController * popVC = [storyboard instantiateViewControllerWithIdentifier:@"AddMedicationViewController"];
     
-    
     popVC.delegate = self;
     
     UINavigationController * naviVC = [[UINavigationController alloc] initWithRootViewController:popVC];
@@ -66,8 +65,6 @@
     [naviVC setModalPresentationStyle:UIModalPresentationFullScreen];
     
     [self presentViewController:naviVC animated:YES completion:nil];
-    
-    
 }
 
 #pragma mark Delegate
@@ -168,7 +165,6 @@
                 [self->_medicationTableView reloadData];
             });
         }
-        
     }];
 }
 

@@ -57,7 +57,6 @@
     self.navigationItem.rightBarButtonItem = _addBtn;
     
     selectedMediItemList = [NSMutableArray new];
-    
 }
 
 #pragma mark IBActions
@@ -116,7 +115,6 @@
             }
         }];
     }
-    
 }
 
 - (IBAction)mediSearchBtnTapped:(UIButton *)sender {
@@ -147,9 +145,6 @@
         
         [_selectedMediItemStackView addArrangedSubview:itemView];
     }
-    
 }
-
-
 
 @end
