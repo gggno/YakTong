@@ -72,7 +72,7 @@
                                                style:UIBarButtonItemStylePlain
                                                target:self
                                                action:@selector(yakTongBtnTapped:)];
-                [strongSelf->_yakTongBtn setTintColor:UIColor.greenColor];
+                [strongSelf->_yakTongBtn setTintColor:UIColor.systemBlueColor];
                 
                 if ([snapshot.documents count] > 0) {
                     NSLog(@"이미 해당 의약품이 약통에 존재합니다.");
@@ -151,7 +151,7 @@
                 if (strongSelf) {
                     strongSelf->_yakTongState = NO;
                     dispatch_async(dispatch_get_main_queue(), ^{
-                        [strongSelf->_yakTongBtn setTintColor:UIColor.greenColor];
+                        [strongSelf->_yakTongBtn setTintColor:UIColor.systemBlueColor];
                     });
                 }
                 
